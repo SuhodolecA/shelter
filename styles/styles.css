@@ -328,6 +328,12 @@ a:hover {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
@@ -395,8 +401,13 @@ body {
 .header {
   position: absolute;
   top: 1.875rem;
-  padding-left: 0.625em;
   width: 100%;
+  padding-left: 0.625em;
+}
+@media (min-width: 48rem) {
+  .header {
+    padding: 0 1.875em;
+  }
 }
 .header-logo__title-text {
   font-family: "Georgia";
@@ -414,7 +425,7 @@ body {
   letter-spacing: 0.1em;
   color: #ffffff;
   padding-left: 0.25rem;
-  margin: 0.74em 0 0 0;
+  margin: 0.63em 0 0 0;
 }
 .header-hamburger {
   border: 0;
@@ -424,6 +435,11 @@ body {
   margin-right: 3.3125em;
   margin-top: 0.1875em;
 }
+@media (min-width: 48rem) {
+  .header-hamburger {
+    display: none;
+  }
+}
 .header-hamburger__line {
   display: block;
   width: 1.875rem;
@@ -432,4 +448,30 @@ body {
 }
 .header-hamburger__line + .header-hamburger__line {
   margin-top: 0.5em;
+}
+@media (max-width: 47.9375em) {
+  .header-menu {
+    display: none;
+  }
+}
+.header-menu__item + .header-menu__item {
+  margin-left: 2.1875em;
+}
+.header-menu__item-link {
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 160%;
+  letter-spacing: 0.004em;
+  color: #cdcdcd;
+  border-bottom: 0.1875rem solid transparent;
+  padding-bottom: 0.24em;
+  transition: all 0.3s ease-in;
+}
+.header-menu__item-link:hover, .header-menu__item-link:focus {
+  color: #fafafa;
+}
+.header-menu__item-link.current-link {
+  color: #fafafa;
+  border-bottom-color: #f1cdb3;
 }/*# sourceMappingURL=styles.css.map */

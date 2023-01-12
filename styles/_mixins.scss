@@ -16,3 +16,37 @@
   letter-spacing: 0.1em;
   color: $color-light-xl;
 }
+
+@mixin paragraph-l {
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 160%;
+}
+
+// Breakpoints
+// 590px, 768px, 1280px
+$breakpoints-up: (
+  "medium": "36.875rem",
+  "large": "48rem",
+  "xlarge": "80rem",
+);
+
+// 589px, 767px,  1279px
+$breakpoints-down: (
+  "small": "36.8125rem",
+  "medium": "47.9375em",
+  "large": "79.9375rem",
+);
+
+@mixin breakpoints-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoints-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
