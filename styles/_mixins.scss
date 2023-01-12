@@ -1,0 +1,18 @@
+// Text mixins
+@mixin logo_title {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: 0.055em;
+  color: $color-primary;
+}
+
+@mixin logo_subtitle {
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.15;
+  letter-spacing: 0.1em;
+  color: $color-light-xl;
+}

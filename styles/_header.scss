@@ -1,0 +1,36 @@
+.header {
+  position: absolute;
+  top: 1.875rem;
+  padding-left: 0.625em;
+  width: 100%;
+
+  &-logo__title-text {
+    @include logo_title;
+  }
+
+  &-logo__subtitle {
+    @include logo_subtitle;
+    padding-left: 0.25rem;
+    margin: 0.74em 0 0 0;
+  }
+
+  &-hamburger {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 3.3125em;
+    margin-top: 0.1875em;
+
+    &__line {
+      display: block;
+      width: 1.875rem;
+      height: 0.125rem;
+      background-color: $color-primary;
+
+      & + & {
+        margin-top: 0.5em;
+      }
+    }
+  }
+}

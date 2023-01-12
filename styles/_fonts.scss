@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Arial";
+  src: url("../../../assets/fonts/Arial.eot"); /* IE9 Compat Modes */
+  src: url("../../../assets/fonts/Arial.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../../assets/fonts/Arial.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../../../assets/fonts/Arial.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("../../../assets/fonts/Arial.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../../../assets/fonts/Arial.svg#Arial")
+      format("svg"); /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../../../assets/fonts/Arial-Italic.eot"); /* IE9 Compat Modes */
+  src: url("../../../assets/fonts/Arial-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../../assets/fonts/Arial-Italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../../../assets/fonts/Arial-Italic.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("../../../assets/fonts/Arial-Italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../../../assets/fonts/Arial-Italic.svg#Arial-Italic") format("svg"); /* Legacy iOS */
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../../assets/fonts/Georgia.eot"); /* IE9 Compat Modes */
+  src: url("../../../assets/fonts/Georgia.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../../assets/fonts/Georgia.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../../../assets/fonts/Georgia.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("../../../assets/fonts/Georgia.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../../../assets/fonts/Georgia.svg#Georgia")
+      format("svg"); /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
