@@ -441,6 +441,11 @@ body {
   padding-left: 0.25rem;
   margin: 0.63em 0 0 0;
 }
+@media (min-width: 48rem) {
+  .header-mobile-nav {
+    display: none;
+  }
+}
 .header-hamburger {
   border: 0;
   background-color: transparent;
@@ -448,11 +453,6 @@ body {
   padding: 0;
   margin-right: 3.3125em;
   margin-top: 0.1875em;
-}
-@media (min-width: 48rem) {
-  .header-hamburger {
-    display: none;
-  }
 }
 .header-hamburger__line {
   display: block;
@@ -464,14 +464,14 @@ body {
   margin-top: 0.5em;
 }
 @media (max-width: 47.9375em) {
-  .header-menu {
+  .header-nav__menu {
     display: none;
   }
 }
-.header-menu__item + .header-menu__item {
+.header-nav__menu-item + .header-nav__menu-item {
   margin-left: 2.1875em;
 }
-.header-menu__item-link {
+.header-nav__menu-item__link {
   font-family: "Arial";
   font-weight: 400;
   font-size: 0.9375rem;
@@ -482,10 +482,10 @@ body {
   padding-bottom: 0.24em;
   transition: all 0.3s ease-in;
 }
-.header-menu__item-link:hover, .header-menu__item-link:focus {
+.header-nav__menu-item__link:hover, .header-nav__menu-item__link:focus {
   color: #fafafa;
 }
-.header-menu__item-link.current-link {
+.header-nav__menu-item__link.current-link {
   color: #fafafa;
   border-bottom-color: #f1cdb3;
 }/*# sourceMappingURL=styles.css.map */

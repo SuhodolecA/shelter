@@ -1,13 +1,8 @@
 .header {
   position: absolute;
-  // top: 1.875rem;
   top: 0;
   left: 0;
   width: 100%;
-  // padding-left: 0.625em;
-  // @include breakpoints-up(large) {
-  //   padding: 0 1.875em;
-  // }
 
   .container {
     padding-left: 0.625em;
@@ -32,6 +27,11 @@
     }
   }
   // hamburger menu
+  &-mobile-nav {
+    @include breakpoints-up(large) {
+      display: none;
+    }
+  }
   &-hamburger {
     border: 0;
     background-color: transparent;
@@ -39,10 +39,6 @@
     padding: 0;
     margin-right: 3.3125em;
     margin-top: 0.1875em;
-
-    @include breakpoints-up(large) {
-      display: none;
-    }
 
     &__line {
       display: block;
@@ -56,30 +52,32 @@
     }
   }
   // header navigation menu
-  &-menu {
-    @include breakpoints-down(medium) {
-      display: none;
-    }
-    &__item {
-      & + & {
-        margin-left: 2.1875em;
+  &-nav {
+    &__menu {
+      @include breakpoints-down(medium) {
+        display: none;
       }
-      &-link {
-        @include paragraph-l;
-        letter-spacing: 0.004em;
-        color: $color-dark-s;
-        border-bottom: 0.1875rem solid transparent;
-        padding-bottom: 0.24em;
-        transition: all 0.3s ease-in;
-
-        &:hover,
-        &:focus {
-          color: $color-light-s;
+      &-item {
+        & + & {
+          margin-left: 2.1875em;
         }
+        &__link {
+          @include paragraph-l;
+          letter-spacing: 0.004em;
+          color: $color-dark-s;
+          border-bottom: 0.1875rem solid transparent;
+          padding-bottom: 0.24em;
+          transition: all 0.3s ease-in;
 
-        &.current-link {
-          color: $color-light-s;
-          border-bottom-color: $color-primary;
+          &:hover,
+          &:focus {
+            color: $color-light-s;
+          }
+
+          &.current-link {
+            color: $color-light-s;
+            border-bottom-color: $color-primary;
+          }
         }
       }
     }
