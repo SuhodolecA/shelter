@@ -17,6 +17,22 @@ a:hover {
   text-decoration: none;
 }
 
+.nav-link {
+  border-bottom: 0.1875rem solid transparent;
+  padding-bottom: 0.24em;
+  transition: all 0.3s ease-in;
+
+  &:hover,
+  &:focus {
+    color: $color-light-s;
+  }
+
+  &.current-link {
+    color: $color-light-s;
+    border-bottom-color: $color-primary;
+  }
+}
+
 // Lists
 ul {
   list-style-type: none;

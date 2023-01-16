@@ -17,11 +17,30 @@
   color: $color-light-xl;
 }
 
+@mixin menu_links($font-size) {
+  font-family: "Arial";
+  font-weight: 400;
+  line-height: 1.6;
+  color: $color-dark-s;
+  font-size: $font-size;
+}
+
+// !!!!!!!!!!!!check usability!!!!!!!!!!!!!!
 @mixin paragraph-l {
   font-family: "Arial";
   font-weight: 400;
   font-size: 0.9375rem;
-  line-height: 160%;
+  line-height: 1.6;
+  color: $color-dark-s;
+}
+
+// !!!!!!!!!!!!check usability!!!!!!
+@mixin paragraph-mobile-menu {
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.6;
+  color: $color-dark-s;
 }
 
 // Breakpoints

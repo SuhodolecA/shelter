@@ -4,14 +4,11 @@
   left: 0;
   width: 100%;
 
-  .container {
-    padding-left: 0.625em;
-    padding-top: 1.875em;
-    @include breakpoints-up(large) {
-      padding: 1.875em;
-    }
-    @include breakpoints-up(xlarge) {
-      padding: 3.75em 0 0 0;
+  &-nav-wrapper {
+    @include breakpoints-down(small) {
+      .header-logo {
+        visibility: hidden;
+      }
     }
   }
 
@@ -26,20 +23,17 @@
       margin: 0.63em 0 0 0;
     }
   }
+
   // hamburger menu
-  &-mobile-nav {
-    @include breakpoints-up(large) {
-      display: none;
-    }
-  }
   &-hamburger {
+    @include breakpoints-down(medium) {
+      display: block;
+    }
     border: 0;
     background-color: transparent;
     cursor: pointer;
     padding: 0;
-    margin-right: 3.3125em;
-    margin-top: 0.1875em;
-
+    display: none;
     &__line {
       display: block;
       width: 1.875rem;
@@ -51,18 +45,62 @@
       }
     }
   }
-  // header navigation menu
+
+  // header links
+  .nav-links-wrapper {
+    @include breakpoints-down(medium) {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+      background-color: $color-dark-3xl;
+      width: 20em;
+      padding-top: 15.5em;
+      overflow-x: hidden;
+    }
+    transition: all 0.3s ease-in-out;
+
+    .header-logo {
+      display: none;
+      @include breakpoints-down(medium) {
+        position: absolute;
+        top: 2em;
+        left: 0.875em;
+        display: block;
+      }
+    }
+  }
+
   &-nav {
+    flex-direction: row;
+    padding: 1.875em 1.875em 0;
+    @include breakpoints-down(medium) {
+      flex-direction: column;
+      padding: 1.875em 3.3125em 0 0.625em;
+      justify-content: unset;
+      align-items: unset;
+    }
+
     &__menu {
       @include breakpoints-down(medium) {
-        display: none;
+        flex-direction: column;
+        text-align: center;
       }
+
       &-item {
         & + & {
           margin-left: 2.1875em;
         }
+        @include breakpoints-down(medium) {
+          margin-left: 0.625em;
+          & + & {
+            margin-top: 2.625em;
+            margin-left: 0.625em;
+          }
+        }
         &__link {
           @include paragraph-l;
+          @include menu_links(0.9375rem);
           letter-spacing: 0.004em;
           color: $color-dark-s;
           border-bottom: 0.1875rem solid transparent;
@@ -74,9 +112,8 @@
             color: $color-light-s;
           }
 
-          &.current-link {
-            color: $color-light-s;
-            border-bottom-color: $color-primary;
+          @include breakpoints-down(medium) {
+            @include menu_links(2rem);
           }
         }
       }
