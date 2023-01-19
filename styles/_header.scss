@@ -3,15 +3,25 @@
   top: 0;
   left: 0;
   width: 100%;
+  overflow-x: clip;
+  padding: 1.875em 3.3125em 0 0.625em;
+
+  @include breakpoints-up(large) {
+    padding: 1.875em 1.875em 0;
+  }
+  @include breakpoints-up(xlarge) {
+    padding: 3.75em 2.5em 0;
+  }
 
   &-nav-wrapper {
-    @include breakpoints-down(small) {
-      .header-logo {
-        visibility: hidden;
-      }
+    width: 100%;
+
+    @include breakpoints-up(large) {
+      width: auto;
     }
   }
 
+  //  logo styels
   &-logo {
     &__title-text {
       @include logo_title;
@@ -26,14 +36,15 @@
 
   // hamburger menu
   &-hamburger {
-    @include breakpoints-down(medium) {
-      display: block;
-    }
     border: 0;
     background-color: transparent;
     cursor: pointer;
     padding: 0;
-    display: none;
+
+    @include breakpoints-up(large) {
+      display: none;
+    }
+
     &__line {
       display: block;
       width: 1.875rem;
@@ -48,72 +59,74 @@
 
   // header links
   .nav-links-wrapper {
-    @include breakpoints-down(medium) {
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: -1;
-      background-color: $color-dark-3xl;
-      width: 20em;
-      padding-top: 15.5em;
-      overflow-x: hidden;
+    position: absolute;
+    right: -20em;
+    top: 0;
+    z-index: -1;
+    background-color: $color-dark-3xl;
+    width: 20em;
+    padding-top: 15.5em;
+
+    @include breakpoints-up(large) {
+      position: initial;
+      width: auto;
+      background-color: transparent;
+      padding-top: 0;
+      z-index: 0;
     }
-    transition: all 0.3s ease-in-out;
 
     .header-logo {
-      display: none;
-      @include breakpoints-down(medium) {
-        position: absolute;
-        top: 2em;
-        left: 0.875em;
-        display: block;
+      position: absolute;
+      top: 2em;
+      left: 0.875em;
+
+      @include breakpoints-up(large) {
+        display: none;
       }
     }
   }
 
   &-nav {
-    flex-direction: row;
-    padding: 1.875em 1.875em 0;
-    @include breakpoints-down(medium) {
-      flex-direction: column;
-      padding: 1.875em 3.3125em 0 0.625em;
-      justify-content: unset;
-      align-items: unset;
-    }
-
     &__menu {
-      @include breakpoints-down(medium) {
-        flex-direction: column;
-        text-align: center;
+      flex-direction: column;
+      text-align: center;
+
+      @include breakpoints-up(large) {
+        flex-direction: row;
       }
 
       &-item {
-        & + & {
-          margin-left: 2.1875em;
+        margin-left: 0.625em;
+        @include breakpoints-up(large) {
+          margin-left: 0;
         }
-        @include breakpoints-down(medium) {
+
+        & + & {
+          margin-top: 2.625em;
           margin-left: 0.625em;
-          & + & {
-            margin-top: 2.625em;
-            margin-left: 0.625em;
+
+          @include breakpoints-up(large) {
+            margin-top: 0;
+            margin-left: 2.1875em;
           }
         }
+
         &__link {
           @include paragraph-l;
-          @include menu_links(0.9375rem);
+          @include menu_links(2rem);
           letter-spacing: 0.004em;
           color: $color-dark-s;
           border-bottom: 0.1875rem solid transparent;
           padding-bottom: 0.24em;
           transition: all 0.3s ease-in;
 
+          @include breakpoints-up(large) {
+            @include menu_links(0.9375rem);
+          }
+
           &:hover,
           &:focus {
             color: $color-light-s;
-          }
-
-          @include breakpoints-down(medium) {
-            @include menu_links(2rem);
           }
         }
       }
