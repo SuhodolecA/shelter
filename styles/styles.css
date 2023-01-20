@@ -585,6 +585,12 @@ body {
   background-image: url("../assets/images/hero/noise_lines_transparent@2X.png"), radial-gradient(100% 215.42% at 0% 0%, hsl(25deg, 22%, 29%) 0%, hsl(330deg, 3%, 15%) 100%);
   text-align: center;
 }
+@media (min-width: 80rem) {
+  .hero {
+    padding: 11.25em 2.5em 0;
+    text-align: unset;
+  }
+}
 .hero .container {
   padding-bottom: 23.5625em;
   background: url("../assets/images/hero/start-screen-puppy-320.png") no-repeat bottom right;
@@ -595,10 +601,22 @@ body {
     background: url("../assets/images/hero/start-screen-puppy-768.png") no-repeat bottom right 11%;
   }
 }
+@media (min-width: 80rem) {
+  .hero .container {
+    padding-bottom: 243px;
+    background: url("../assets/images/hero/start-screen-puppy-1280.png") no-repeat bottom right;
+  }
+}
 @media (min-width: 48rem) {
   .hero-content {
     max-width: 28.75rem;
     margin: 0 auto;
+  }
+}
+@media (min-width: 80rem) {
+  .hero-content {
+    margin: 0;
+    padding-top: 10.1875em;
   }
 }
 .hero-content__title {
