@@ -118,6 +118,7 @@
           color: $color-dark-s;
           border-bottom: 0.1875rem solid transparent;
           padding-bottom: 0.24em;
+          // padding-bottom: 0.16em; check this size for pixel perfect before deploying
           transition: all 0.3s ease-in;
 
           @include breakpoints-up(large) {

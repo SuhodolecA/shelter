@@ -9,18 +9,40 @@
     );
   text-align: center;
 
-  &-content {
+  .container {
     padding-bottom: 23.5625em;
     background: url("../assets/images/hero/start-screen-puppy-320.png")
       no-repeat bottom right;
+
+    @include breakpoints-up(large) {
+      padding-bottom: 43.3125em;
+      background: url("../assets/images/hero/start-screen-puppy-768.png")
+        no-repeat bottom right 11%;
+    }
+  }
+
+  &-content {
+    @include breakpoints-up(large) {
+      max-width: 28.75rem;
+      margin: 0 auto;
+    }
     &__title {
       @include h3-mobile;
-      color: $color-light-xl;
       padding: 0 0.8em;
+
+      @include breakpoints-up(large) {
+        @include h2;
+        padding: 0 1.1136em 0 0;
+        text-align: left;
+      }
     }
     &__text {
       @include paragraph-l;
       padding: 2.8em 0;
+
+      @include breakpoints-up(large) {
+        text-align: left;
+      }
     }
   }
 }
