@@ -8,6 +8,8 @@
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 // Links
@@ -49,6 +51,15 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+}
+
+// buttons
+.button-primary {
+  @include btn-primary-text;
+  padding: 0.88235em 2.647em;
+  background-color: $color-primary;
+  border-radius: 5.882em;
+  display: inline-block;
 }
 
 // helper classes

@@ -1,8 +1,9 @@
-@import "variables";
-@import "normalize";
-@import "globals";
 @import "fonts";
+@import "normalize";
+@import "variables";
 @import "mixins";
+@import "globals";
 
 // main
 @import "header";
+@import "hero";

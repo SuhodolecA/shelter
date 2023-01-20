@@ -25,13 +25,29 @@
   font-size: $font-size;
 }
 
-// !!!!!!!!!!!!check usability!!!!!!!!!!!!!!
+@mixin h3-mobile {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 1.5625rem;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+}
+
 @mixin paragraph-l {
   font-family: "Arial";
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.6;
   color: $color-dark-s;
+}
+
+@mixin btn-primary-text {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  color: $color-dark-3xl;
 }
 
 // !!!!!!!!!!!!check usability!!!!!!

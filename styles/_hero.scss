@@ -1,0 +1,26 @@
+.hero {
+  padding: 9.375em 0.625em 0;
+  background: $color-primary-background;
+  background-image: url("../assets/images/hero/noise_lines_transparent@2X.png"),
+    radial-gradient(
+      100% 215.42% at 0% 0%,
+      hsl(25, 22%, 29%) 0%,
+      hsl(330, 3%, 15%) 100%
+    );
+  text-align: center;
+
+  &-content {
+    padding-bottom: 23.5625em;
+    background: url("../assets/images/hero/start-screen-puppy-320.png")
+      no-repeat bottom right;
+    &__title {
+      @include h3-mobile;
+      color: $color-light-xl;
+      padding: 0 0.8em;
+    }
+    &__text {
+      @include paragraph-l;
+      padding: 2.8em 0;
+    }
+  }
+}
