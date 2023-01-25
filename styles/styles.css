@@ -683,7 +683,7 @@ body {
 }
 @media (min-width: 80rem) {
   .about {
-    padding: 5em 2.5em 6.25em;
+    padding: 5em 2.5em 6em;
   }
 }
 .about-content {
@@ -808,6 +808,11 @@ body {
     margin-bottom: 3.75em;
   }
 }
+@media (min-width: 80rem) {
+  .our-friends-carousel {
+    max-width: 61.875rem;
+  }
+}
 .our-friends-carousel__track-card {
   min-width: 16.875rem;
   background: #fafafa;
@@ -816,7 +821,12 @@ body {
 }
 @media (min-width: 48rem) {
   .our-friends-carousel__track-card:not(:nth-child(3n+1)) {
-    margin-left: 40px;
+    margin-left: 2.5em;
+  }
+}
+@media (min-width: 80rem) {
+  .our-friends-carousel__track-card:not(:nth-child(3n+1)) {
+    margin-left: 5.625em;
   }
 }
 .our-friends-carousel__track-card__img {
