@@ -68,6 +68,15 @@
   color: $color-light-xl;
 }
 
+@mixin pets-card-title {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 1.25em;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+
 // !!!!!!!!!!!!check usability!!!!!!
 @mixin paragraph-mobile-menu {
   font-family: "Arial";

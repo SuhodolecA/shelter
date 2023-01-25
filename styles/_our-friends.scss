@@ -1,0 +1,50 @@
+.our-friends {
+  background-color: $color-light-l;
+  padding: 2.625em 0.625em;
+  text-align: center;
+
+  &-title {
+    @include h3-mobile;
+    color: $color-dark-l;
+  }
+
+  &-carousel {
+    padding: 2.625em 0.9375em 1.25em;
+    &__track {
+      &-card {
+        max-width: 16.875rem;
+        background: $color-light-s;
+        overflow: hidden;
+        border-radius: 0.5625em;
+        &__img {
+          vertical-align: middle;
+        }
+        &__content {
+          padding: 1.875em 0;
+
+          &-title {
+            @include pets-card-title;
+            margin-bottom: 1.5em;
+          }
+        }
+      }
+    }
+  }
+
+  &-controls {
+    display: grid;
+    grid-template-columns: repeat(2, 3.25rem);
+    justify-content: center;
+    gap: 5em;
+    margin-bottom: 2.3125em;
+    &-item {
+      &__btn {
+        background: no-repeat center;
+        background-image: url("../assets/images/our-pets/arrow-left.svg");
+      }
+    }
+    .next {
+      background-image: url("../assets/images/our-pets/arrow-right.svg");
+    }
+  }
+}
