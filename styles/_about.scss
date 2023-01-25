@@ -2,7 +2,7 @@
   padding: 2.625em 0.625em 2.375em;
 
   @include breakpoints-up(large) {
-    padding: 5em 0 6.25em;
+    padding: 5em 0 6em;
   }
 
   @include breakpoints-up(xlarge) {

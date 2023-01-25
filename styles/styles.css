@@ -678,7 +678,7 @@ body {
 }
 @media (min-width: 48rem) {
   .about {
-    padding: 5em 0 6.25em;
+    padding: 5em 0 6em;
   }
 }
 @media (min-width: 80rem) {
@@ -768,6 +768,16 @@ body {
   padding: 2.625em 0.625em;
   text-align: center;
 }
+@media (min-width: 48rem) {
+  .our-friends .container {
+    position: relative;
+  }
+}
+@media (min-width: 48rem) {
+  .our-friends {
+    padding: 5em 1.875em 6.25em;
+  }
+}
 .our-friends-title {
   font-weight: 400;
   font-size: 1.5625rem;
@@ -776,14 +786,38 @@ body {
   color: #ffffff;
   color: #545454;
 }
+@media (min-width: 48rem) {
+  .our-friends-title {
+    font-weight: 400;
+    font-size: 2.1875rem;
+    line-height: 1.285;
+    letter-spacing: 0.06em;
+    margin-bottom: 1.71428em;
+  }
+}
 .our-friends-carousel {
-  padding: 2.625em 0.9375em 1.25em;
+  max-width: 16.875rem;
+  padding: 2.625em 0 1.25em;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media (min-width: 48rem) {
+  .our-friends-carousel {
+    padding: 0;
+    max-width: 36.25rem;
+    margin-bottom: 3.75em;
+  }
 }
 .our-friends-carousel__track-card {
-  max-width: 16.875rem;
+  min-width: 16.875rem;
   background: #fafafa;
   overflow: hidden;
   border-radius: 0.5625em;
+}
+@media (min-width: 48rem) {
+  .our-friends-carousel__track-card:not(:nth-child(3n+1)) {
+    margin-left: 40px;
+  }
 }
 .our-friends-carousel__track-card__img {
   vertical-align: middle;
@@ -806,6 +840,14 @@ body {
   justify-content: center;
   gap: 5em;
   margin-bottom: 2.3125em;
+}
+@media (min-width: 48rem) {
+  .our-friends-controls {
+    position: absolute;
+    top: 49%;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 .our-friends-controls-item__btn {
   background: no-repeat center;
