@@ -2,16 +2,31 @@
   padding: 2.625em 0.9375em;
   text-align: center;
 
+  @include breakpoints-up(large) {
+    padding: 5em 4.3125em 6.25em;
+  }
+
   &-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.875em;
     margin-top: 2.625em;
 
+    @include breakpoints-up(large) {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3.4375em 3.75em;
+      margin-top: 3.75em;
+    }
+
     &__item {
       &-title {
         @include h5;
         margin-top: 1.06666em;
+
+        @include breakpoints-up(large) {
+          @include h4;
+          margin-top: 1.25em;
+        }
       }
     }
   }

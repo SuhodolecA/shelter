@@ -862,11 +862,23 @@ body {
   padding: 2.625em 0.9375em;
   text-align: center;
 }
+@media (min-width: 48rem) {
+  .help {
+    padding: 5em 4.3125em 6.25em;
+  }
+}
 .help-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.875em;
   margin-top: 2.625em;
+}
+@media (min-width: 48rem) {
+  .help-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.4375em 3.75em;
+    margin-top: 3.75em;
+  }
 }
 .help-list__item-title {
   font-weight: 400;
@@ -875,4 +887,14 @@ body {
   letter-spacing: 0.06em;
   color: #545454;
   margin-top: 1.06666em;
+}
+@media (min-width: 48rem) {
+  .help-list__item-title {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin-top: 1.25em;
+  }
 }/*# sourceMappingURL=styles.css.map */
