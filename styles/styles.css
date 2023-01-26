@@ -856,4 +856,23 @@ body {
 }
 .our-friends-controls .next {
   background-image: url("../assets/images/our-pets/arrow-right.svg");
+}
+
+.help {
+  padding: 2.625em 0.9375em;
+  text-align: center;
+}
+.help-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.875em;
+  margin-top: 2.625em;
+}
+.help-list__item-title {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin-top: 1.06666em;
 }/*# sourceMappingURL=styles.css.map */

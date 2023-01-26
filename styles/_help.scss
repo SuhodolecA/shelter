@@ -1,0 +1,18 @@
+.help {
+  padding: 2.625em 0.9375em;
+  text-align: center;
+
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.875em;
+    margin-top: 2.625em;
+
+    &__item {
+      &-title {
+        @include h5;
+        margin-top: 1.06666em;
+      }
+    }
+  }
+}
