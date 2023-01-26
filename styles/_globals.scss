@@ -53,6 +53,14 @@ h6 {
   padding: 0;
 }
 
+.primary-title {
+  @include h3-mobile;
+
+  @include breakpoints-up(large) {
+    @include h3;
+  }
+}
+
 // buttons
 .button-primary {
   @include btn-primary-text;
