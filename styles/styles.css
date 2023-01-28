@@ -918,13 +918,43 @@ body {
   padding: 2.625em 0.625em;
   text-align: center;
 }
+@media (min-width: 48rem) {
+  .donation {
+    padding: 5em 0 6.25em;
+    text-align: initial;
+  }
+}
+@media (min-width: 48rem) {
+  .donation-title {
+    max-width: 23.75rem;
+    margin: 0 auto;
+    margin-top: 0.05714em;
+  }
+}
+@media (min-width: 48rem) {
+  .donation-content {
+    max-width: 23.75rem;
+    margin: 0 auto;
+  }
+}
 .donation-content__info {
   margin: 1.25em 0 2.625em;
+}
+@media (min-width: 48rem) {
+  .donation-content__info {
+    margin: 1em 0 3.75em;
+  }
 }
 .donation-content__info-description {
   font-size: 0.9375rem;
   line-height: 1.6;
   color: #545454;
+}
+@media (min-width: 48rem) {
+  .donation-content__info-description {
+    letter-spacing: 0.0666666em;
+    word-spacing: -0.02666666em;
+  }
 }
 .donation-content__info-account {
   display: inline-block;
@@ -935,8 +965,19 @@ body {
   color: #545454;
   margin: 1.36666em 0;
   padding: 0.86666em 1em 0.86666em 4em;
-  border-radius: 0.6em;
+  border-radius: 0.6rem;
   position: relative;
+}
+@media (min-width: 48rem) {
+  .donation-content__info-account {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin: 0.8em 0 1em;
+    padding: 0.5em 0.75em 0.5em 3em;
+  }
 }
 .donation-content__info-account::before {
   content: "";
@@ -956,4 +997,21 @@ body {
   text-align: justify;
   color: #b2b2b2;
   padding: 0 0.8333em;
+}
+@media (min-width: 48rem) {
+  .donation-content__info-policy {
+    padding: 0;
+    text-align: left;
+  }
+}
+@media (min-width: 48rem) {
+  .donation-pic {
+    display: block;
+    text-align: center;
+  }
+}
+@media (min-width: 48rem) {
+  .donation-pic__img {
+    margin-left: -0.0625em;
+  }
 }/*# sourceMappingURL=styles.css.map */

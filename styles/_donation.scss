@@ -3,22 +3,54 @@
   padding: 2.625em 0.625em;
   text-align: center;
 
+  @include breakpoints-up(large) {
+    padding: 5em 0 6.25em;
+    text-align: initial;
+  }
+
+  &-title {
+    @include breakpoints-up(large) {
+      max-width: 23.75rem;
+      margin: 0 auto;
+      margin-top: 0.05714em;
+    }
+  }
+
   &-content {
+    @include breakpoints-up(large) {
+      max-width: 23.75rem;
+      margin: 0 auto;
+    }
     &__info {
       margin: 1.25em 0 2.625em;
+
+      @include breakpoints-up(large) {
+        margin: 1em 0 3.75em;
+      }
 
       &-description {
         font-size: 0.9375rem;
         line-height: 1.6;
         color: $color-dark-l;
+
+        @include breakpoints-up(large) {
+          letter-spacing: 0.0666666em;
+          word-spacing: -0.02666666em;
+        }
       }
       &-account {
         display: inline-block;
         @include h5;
         margin: 1.36666em 0;
         padding: 0.86666em 1em 0.86666em 4em;
-        border-radius: 0.6em;
+        border-radius: 0.6rem;
         position: relative;
+
+        @include breakpoints-up(large) {
+          @include h4;
+          margin: 0.8em 0 1em;
+          padding: 0.5em 0.75em 0.5em 3em;
+        }
 
         &::before {
           content: "";
@@ -36,6 +68,23 @@
       &-policy {
         @include policy-text;
         padding: 0 0.8333em;
+
+        @include breakpoints-up(large) {
+          padding: 0;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &-pic {
+    @include breakpoints-up(large) {
+      display: block;
+      text-align: center;
+    }
+    &__img {
+      @include breakpoints-up(large) {
+        margin-left: -0.0625em;
       }
     }
   }
