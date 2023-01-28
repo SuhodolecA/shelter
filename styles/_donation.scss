@@ -8,6 +8,16 @@
     text-align: initial;
   }
 
+  .container {
+    flex-direction: column;
+
+    @include breakpoints-up(xlarge) {
+      flex-direction: row-reverse;
+      justify-content: center;
+      gap: 1.875em;
+    }
+  }
+
   &-title {
     @include breakpoints-up(large) {
       max-width: 23.75rem;
@@ -20,6 +30,10 @@
     @include breakpoints-up(large) {
       max-width: 23.75rem;
       margin: 0 auto;
+    }
+
+    @include breakpoints-up(xlarge) {
+      margin: 0;
     }
     &__info {
       margin: 1.25em 0 2.625em;
@@ -81,6 +95,10 @@
     @include breakpoints-up(large) {
       display: block;
       text-align: center;
+    }
+
+    @include breakpoints-up(xlarge) {
+      margin-top: 0.75em;
     }
     &__img {
       @include breakpoints-up(large) {

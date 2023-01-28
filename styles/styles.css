@@ -924,6 +924,16 @@ body {
     text-align: initial;
   }
 }
+.donation .container {
+  flex-direction: column;
+}
+@media (min-width: 80rem) {
+  .donation .container {
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 1.875em;
+  }
+}
 @media (min-width: 48rem) {
   .donation-title {
     max-width: 23.75rem;
@@ -935,6 +945,11 @@ body {
   .donation-content {
     max-width: 23.75rem;
     margin: 0 auto;
+  }
+}
+@media (min-width: 80rem) {
+  .donation-content {
+    margin: 0;
   }
 }
 .donation-content__info {
@@ -1008,6 +1023,11 @@ body {
   .donation-pic {
     display: block;
     text-align: center;
+  }
+}
+@media (min-width: 80rem) {
+  .donation-pic {
+    margin-top: 0.75em;
   }
 }
 @media (min-width: 48rem) {
