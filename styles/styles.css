@@ -563,6 +563,7 @@ body {
 .header-nav__menu {
   flex-direction: column;
   text-align: center;
+  margin-top: 1em;
 }
 @media (min-width: 48rem) {
   .header-nav__menu {
@@ -601,7 +602,7 @@ body {
   letter-spacing: 0.004em;
   color: #cdcdcd;
   border-bottom: 0.1875rem solid transparent;
-  padding-bottom: 0.24em;
+  padding-bottom: 0.26666em;
   transition: all 0.3s ease-in;
 }
 @media (min-width: 48rem) {
@@ -924,6 +925,11 @@ body {
     text-align: initial;
   }
 }
+@media (min-width: 80rem) {
+  .donation {
+    padding: 5em 0 6.375em;
+  }
+}
 .donation .container {
   flex-direction: column;
 }
@@ -958,6 +964,11 @@ body {
 @media (min-width: 48rem) {
   .donation-content__info {
     margin: 1em 0 3.75em;
+  }
+}
+@media (min-width: 80rem) {
+  .donation-content__info {
+    margin: 1em 0 0;
   }
 }
 .donation-content__info-description {
@@ -1046,6 +1057,11 @@ body {
     padding: 1.875em 1.875em 0;
   }
 }
+@media (min-width: 80rem) {
+  .footer {
+    padding: 2.5em 2.5em 0;
+  }
+}
 .footer .container {
   padding-bottom: 17.1em;
   background: url("../assets/images/footer/footer-puppy-320.png") no-repeat center bottom;
@@ -1053,7 +1069,13 @@ body {
 @media (min-width: 48rem) {
   .footer .container {
     background: url("../assets/images/footer/footer-puppy-768-1280.png") no-repeat center bottom;
-    padding-bottom: 20.9375rem;
+    padding-bottom: 20.9375em;
+  }
+}
+@media (min-width: 80rem) {
+  .footer .container {
+    padding-bottom: 1.25em;
+    background-position: bottom right;
   }
 }
 .footer-content {
@@ -1063,6 +1085,13 @@ body {
   .footer-content {
     padding: 0 2.125em;
     flex-direction: row;
+  }
+}
+@media (min-width: 80rem) {
+  .footer-content {
+    justify-content: flex-start;
+    gap: 10rem;
+    padding: 0.9375em 0 0;
   }
 }
 .footer-content .primary-title {

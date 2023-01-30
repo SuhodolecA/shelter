@@ -6,6 +6,10 @@
     padding: 1.875em 1.875em 0;
   }
 
+  @include breakpoints-up(xlarge) {
+    padding: 2.5em 2.5em 0;
+  }
+
   .container {
     padding-bottom: 17.1em;
     background: url("../assets/images/footer/footer-puppy-320.png") no-repeat
@@ -14,7 +18,12 @@
     @include breakpoints-up(large) {
       background: url("../assets/images/footer/footer-puppy-768-1280.png")
         no-repeat center bottom;
-      padding-bottom: 20.9375rem;
+      padding-bottom: 20.9375em;
+    }
+
+    @include breakpoints-up(xlarge) {
+      padding-bottom: 1.25em;
+      background-position: bottom right;
     }
   }
 
@@ -24,6 +33,12 @@
     @include breakpoints-up(large) {
       padding: 0 2.125em;
       flex-direction: row;
+    }
+
+    @include breakpoints-up(xlarge) {
+      justify-content: flex-start;
+      gap: 10rem;
+      padding: 0.9375em 0 0;
     }
 
     .primary-title {

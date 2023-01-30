@@ -8,6 +8,10 @@
     text-align: initial;
   }
 
+  @include breakpoints-up(xlarge) {
+    padding: 5em 0 6.375em;
+  }
+
   .container {
     flex-direction: column;
 
@@ -40,6 +44,10 @@
 
       @include breakpoints-up(large) {
         margin: 1em 0 3.75em;
+      }
+
+      @include breakpoints-up(xlarge) {
+        margin: 1em 0 0;
       }
 
       &-description {
