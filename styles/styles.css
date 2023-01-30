@@ -620,7 +620,7 @@ body {
 .hero {
   padding: 9.375em 0.625em 0;
   background: hsl(330deg, 3%, 13%);
-  background-image: url("../assets/images/hero/noise_lines_transparent@2X.png"), radial-gradient(100% 215.42% at 0% 0%, hsl(25deg, 22%, 29%) 0%, hsl(330deg, 3%, 15%) 100%);
+  background-image: url("../assets/images/hero/noise_lines_transparent@2X.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, hsl(25deg, 27%, 25%) 0%, hsl(240deg, 4%, 11%) 100%);
   text-align: center;
 }
 @media (min-width: 80rem) {
@@ -915,7 +915,7 @@ body {
 
 .donation {
   background-color: #f6f6f6;
-  padding: 2.625em 0.625em;
+  padding: 2.625em 0.625em 2.25em;
   text-align: center;
 }
 @media (min-width: 48rem) {
@@ -1034,4 +1034,79 @@ body {
   .donation-pic__img {
     margin-left: -0.0625em;
   }
+}
+
+.footer {
+  padding: 1.875em 0.625em 0;
+  background: hsl(330deg, 3%, 13%);
+  background-image: url("../assets/images/hero/noise_lines_transparent@2X.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, hsl(25deg, 27%, 25%) 0%, hsl(240deg, 4%, 11%) 100%);
+}
+.footer .container {
+  padding-bottom: 17.1em;
+  background: url("../assets/images/footer/footer-puppy-320.png") no-repeat center bottom;
+}
+.footer-content {
+  flex-direction: column;
+}
+.footer-content .primary-title {
+  color: #ffffff;
+  text-align: center;
+}
+.footer-content__contacts-list__item, .footer-content__visit-list__item {
+  margin: 2.5em 0;
+}
+.footer-content__contacts-list__item-link, .footer-content__visit-list__item-link {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+  position: relative;
+}
+.footer-content__contacts {
+  margin: 0 0.6875em;
+}
+.footer-content__contacts-list__item-link {
+  padding-left: 3em;
+  margin: 0.25em 0 0.2em 0.65em;
+}
+.footer-content__contacts-list__item-link::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 1.625rem;
+  background: url("../assets/images/footer/footer-mail-icon.svg") no-repeat center center;
+  position: absolute;
+  top: -0.125rem;
+  left: 0;
+}
+.footer-content__contacts-list__item-link.phone-link {
+  margin-left: 0.95em;
+}
+.footer-content__contacts-list__item-link.phone-link::before {
+  content: "";
+  height: 2rem;
+  background: url("../assets/images/footer/footer-phone-icon.svg") no-repeat center center;
+  top: -0.3125rem;
+}
+.footer-content__visit-title {
+  margin: 0 0.75em;
+}
+.footer-content__visit-list__item:first-of-type {
+  margin-bottom: 2.75em;
+}
+.footer-content__visit-list__item-link {
+  padding-left: 2.086em;
+}
+.footer-content__visit-list__item-link::before {
+  content: "";
+  display: block;
+  width: 1.375rem;
+  height: 2rem;
+  background: url("../assets/images/footer/footer-pin-icon.svg") no-repeat center center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }/*# sourceMappingURL=styles.css.map */

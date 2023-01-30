@@ -1,0 +1,98 @@
+.footer {
+  padding: 1.875em 0.625em 0;
+  @include background-primary;
+
+  .container {
+    padding-bottom: 17.1em;
+    background: url("../assets/images/footer/footer-puppy-320.png") no-repeat
+      center bottom;
+  }
+
+  &-content {
+    flex-direction: column;
+
+    .primary-title {
+      color: $color-light-xl;
+      text-align: center;
+    }
+
+    &__contacts-list__item,
+    &__visit-list__item {
+      margin: 2.5em 0;
+    }
+
+    &__contacts-list__item-link,
+    &__visit-list__item-link {
+      display: inline-block;
+      @include h4($color-primary);
+      position: relative;
+    }
+
+    &__contacts {
+      margin: 0 0.6875em;
+
+      &-list {
+        &__item {
+          &-link {
+            padding-left: 3em;
+            margin: 0.25em 0 0.2em 0.65em;
+
+            &::before {
+              content: "";
+              display: block;
+              width: 2.5rem;
+              height: 1.625rem;
+              background: url("../assets/images/footer/footer-mail-icon.svg")
+                no-repeat center center;
+              position: absolute;
+              top: -0.125rem;
+              left: 0;
+            }
+          }
+
+          &-link.phone-link {
+            margin-left: 0.95em;
+            &::before {
+              content: "";
+              height: 2rem;
+              background: url("../assets/images/footer/footer-phone-icon.svg")
+                no-repeat center center;
+              top: -0.3125rem;
+            }
+          }
+        }
+      }
+    }
+
+    &__visit {
+      &-title {
+        margin: 0 0.75em;
+      }
+
+      &-list {
+        &__item {
+          &:first-of-type {
+            margin-bottom: 2.75em;
+          }
+
+          &-link {
+            padding-left: 2.086em;
+
+            &::before {
+              content: "";
+              display: block;
+              width: 1.375rem;
+              height: 2rem;
+              background: url("../assets/images/footer/footer-pin-icon.svg")
+                no-repeat center center;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

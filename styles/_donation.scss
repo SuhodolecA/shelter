@@ -1,6 +1,6 @@
 .donation {
   background-color: $color-light-l;
-  padding: 2.625em 0.625em;
+  padding: 2.625em 0.625em 2.25em;
   text-align: center;
 
   @include breakpoints-up(large) {
@@ -61,7 +61,7 @@
         position: relative;
 
         @include breakpoints-up(large) {
-          @include h4;
+          @include h4($color-dark-l);
           margin: 0.8em 0 1em;
           padding: 0.5em 0.75em 0.5em 3em;
         }
