@@ -920,7 +920,7 @@ body {
 }
 @media (min-width: 48rem) {
   .donation {
-    padding: 5em 0 6.25em;
+    padding: 5em 0 5.9375em;
     text-align: initial;
   }
 }
@@ -1041,16 +1041,39 @@ body {
   background: hsl(330deg, 3%, 13%);
   background-image: url("../assets/images/hero/noise_lines_transparent@2X.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, hsl(25deg, 27%, 25%) 0%, hsl(240deg, 4%, 11%) 100%);
 }
+@media (min-width: 48rem) {
+  .footer {
+    padding: 1.875em 1.875em 0;
+  }
+}
 .footer .container {
   padding-bottom: 17.1em;
   background: url("../assets/images/footer/footer-puppy-320.png") no-repeat center bottom;
 }
+@media (min-width: 48rem) {
+  .footer .container {
+    background: url("../assets/images/footer/footer-puppy-768-1280.png") no-repeat center bottom;
+    padding-bottom: 20.9375rem;
+  }
+}
 .footer-content {
   flex-direction: column;
+}
+@media (min-width: 48rem) {
+  .footer-content {
+    padding: 0 2.125em;
+    flex-direction: row;
+  }
 }
 .footer-content .primary-title {
   color: #ffffff;
   text-align: center;
+}
+@media (min-width: 48rem) {
+  .footer-content .primary-title {
+    text-align: left;
+    margin-top: 0.05714em;
+  }
 }
 .footer-content__contacts-list__item, .footer-content__visit-list__item {
   margin: 2.5em 0;
@@ -1067,9 +1090,20 @@ body {
 .footer-content__contacts {
   margin: 0 0.6875em;
 }
+@media (min-width: 48rem) {
+  .footer-content__contacts {
+    margin: 0;
+    max-width: 17.4375rem;
+  }
+}
 .footer-content__contacts-list__item-link {
   padding-left: 3em;
   margin: 0.25em 0 0.2em 0.65em;
+}
+@media (min-width: 48rem) {
+  .footer-content__contacts-list__item-link {
+    margin: 0.2em 0 0.2em;
+  }
 }
 .footer-content__contacts-list__item-link::before {
   content: "";
@@ -1084,17 +1118,43 @@ body {
 .footer-content__contacts-list__item-link.phone-link {
   margin-left: 0.95em;
 }
+@media (min-width: 48rem) {
+  .footer-content__contacts-list__item-link.phone-link {
+    margin-left: 0;
+    margin-top: 0.25em;
+  }
+}
 .footer-content__contacts-list__item-link.phone-link::before {
   content: "";
   height: 2rem;
   background: url("../assets/images/footer/footer-phone-icon.svg") no-repeat center center;
   top: -0.3125rem;
 }
+@media (min-width: 48rem) {
+  .footer-content__visit {
+    max-width: 18.875rem;
+  }
+}
 .footer-content__visit-title {
   margin: 0 0.75em;
 }
+@media (min-width: 48rem) {
+  .footer-content__visit-title {
+    margin: 0;
+  }
+}
+@media (min-width: 48rem) {
+  .footer-content__visit-list__item {
+    margin: 2.0625em 0;
+  }
+}
 .footer-content__visit-list__item:first-of-type {
   margin-bottom: 2.75em;
+}
+@media (min-width: 48rem) {
+  .footer-content__visit-list__item:first-of-type {
+    margin-bottom: 2.3125em;
+  }
 }
 .footer-content__visit-list__item-link {
   padding-left: 2.086em;

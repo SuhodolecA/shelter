@@ -2,18 +2,38 @@
   padding: 1.875em 0.625em 0;
   @include background-primary;
 
+  @include breakpoints-up(large) {
+    padding: 1.875em 1.875em 0;
+  }
+
   .container {
     padding-bottom: 17.1em;
     background: url("../assets/images/footer/footer-puppy-320.png") no-repeat
       center bottom;
+
+    @include breakpoints-up(large) {
+      background: url("../assets/images/footer/footer-puppy-768-1280.png")
+        no-repeat center bottom;
+      padding-bottom: 20.9375rem;
+    }
   }
 
   &-content {
     flex-direction: column;
 
+    @include breakpoints-up(large) {
+      padding: 0 2.125em;
+      flex-direction: row;
+    }
+
     .primary-title {
       color: $color-light-xl;
       text-align: center;
+
+      @include breakpoints-up(large) {
+        text-align: left;
+        margin-top: 0.05714em;
+      }
     }
 
     &__contacts-list__item,
@@ -31,11 +51,20 @@
     &__contacts {
       margin: 0 0.6875em;
 
+      @include breakpoints-up(large) {
+        margin: 0;
+        max-width: 17.4375rem;
+      }
+
       &-list {
         &__item {
           &-link {
             padding-left: 3em;
             margin: 0.25em 0 0.2em 0.65em;
+
+            @include breakpoints-up(large) {
+              margin: 0.2em 0 0.2em;
+            }
 
             &::before {
               content: "";
@@ -52,6 +81,11 @@
 
           &-link.phone-link {
             margin-left: 0.95em;
+
+            @include breakpoints-up(large) {
+              margin-left: 0;
+              margin-top: 0.25em;
+            }
             &::before {
               content: "";
               height: 2rem;
@@ -65,14 +99,29 @@
     }
 
     &__visit {
+      @include breakpoints-up(large) {
+        max-width: 18.875rem;
+      }
       &-title {
         margin: 0 0.75em;
+
+        @include breakpoints-up(large) {
+          margin: 0;
+        }
       }
 
       &-list {
         &__item {
+          @include breakpoints-up(large) {
+            margin: 2.0625em 0;
+          }
+
           &:first-of-type {
             margin-bottom: 2.75em;
+
+            @include breakpoints-up(large) {
+              margin-bottom: 2.3125em;
+            }
           }
 
           &-link {
