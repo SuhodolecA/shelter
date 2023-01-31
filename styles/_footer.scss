@@ -76,6 +76,14 @@
           &-link {
             padding-left: 3em;
             margin: 0.25em 0 0.2em 0.65em;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+              color: $color-primary-light;
+              &::before {
+                animation: shake 0.9s cubic-bezier(0.3, 0.17, 0.22, 0.87) 0.2s;
+              }
+            }
 
             @include breakpoints-up(large) {
               margin: 0.2em 0 0.2em;
@@ -96,6 +104,12 @@
 
           &-link.phone-link {
             margin-left: 0.95em;
+
+            &:hover {
+              &::before {
+                animation: ringing 0.9s ease-in-out 0.2s;
+              }
+            }
 
             @include breakpoints-up(large) {
               margin-left: 0;
@@ -141,6 +155,14 @@
 
           &-link {
             padding-left: 2.086em;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+              color: $color-primary-light;
+              &::before {
+                animation: scale 0.9s ease-in-out 0.2s;
+              }
+            }
 
             &::before {
               content: "";

@@ -40,6 +40,7 @@
     background-color: transparent;
     cursor: pointer;
     padding: 0;
+    z-index: 1;
 
     @include breakpoints-up(large) {
       display: none;
@@ -62,7 +63,7 @@
     position: absolute;
     right: -20em;
     top: 0;
-    z-index: -1;
+    z-index: 0;
     background-color: $color-dark-3xl;
     width: 20em;
     padding-top: 15.5em;
