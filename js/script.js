@@ -39,3 +39,10 @@ hamburgerBtn.addEventListener("click", () => {
     showMenu();
   }
 });
+
+//overlay
+pageOverlay.addEventListener("click", () => {
+  hamburgerBtn.classList.remove("rotate");
+  removeOverlay();
+  closeMenu();
+});
