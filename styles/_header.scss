@@ -6,6 +6,15 @@
   overflow-x: clip;
   padding: 1.875em 3.3125em 0 0.625em;
 
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0.5em;
+    z-index: 2;
+    background-color: hsla(330, 3%, 13%, 0.7);
+  }
+
   @include breakpoints-up(large) {
     padding: 1.875em 1.875em 0;
   }
@@ -40,7 +49,12 @@
     background-color: transparent;
     cursor: pointer;
     padding: 0;
-    z-index: 1;
+    z-index: 3;
+    transition: transform 0.3s ease-in-out;
+
+    &.rotate {
+      margin-right: -0.1875em;
+    }
 
     @include breakpoints-up(large) {
       display: none;
@@ -63,10 +77,12 @@
     position: absolute;
     right: -20em;
     top: 0;
-    z-index: 0;
+    z-index: 2;
     background-color: $color-dark-3xl;
     width: 20em;
-    padding-top: 15.5em;
+    min-height: 100vh;
+    // padding-top: 15.5em;
+    padding-top: 10em;
 
     @include breakpoints-up(large) {
       position: initial;
@@ -74,6 +90,7 @@
       background-color: transparent;
       padding-top: 0;
       z-index: 0;
+      min-height: auto;
     }
 
     .header-logo {
@@ -91,10 +108,11 @@
     &__menu {
       flex-direction: column;
       text-align: center;
-      margin-top: 1em;
+      // margin-top: 1em;
 
       @include breakpoints-up(large) {
         flex-direction: row;
+        margin-top: 1em;
       }
 
       &-item {

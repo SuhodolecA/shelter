@@ -400,6 +400,19 @@ h6 {
   }
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: hsla(0deg, 0%, 16%, 0.6);
+  z-index: 2;
+}
+.overlay:hover {
+  cursor: pointer;
+}
+
 .button-primary {
   font-weight: 400;
   font-size: 1.0625rem;
@@ -460,6 +473,18 @@ h6 {
   border: 0;
 }
 
+.hide {
+  display: none;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
 .flex {
   display: flex;
 }
@@ -481,6 +506,7 @@ h6 {
 body {
   font-family: "Georgia", sans-serif;
   font-weight: 400;
+  position: relative;
 }
 
 @-webkit-keyframes shake {
@@ -665,6 +691,14 @@ body {
   overflow-x: clip;
   padding: 1.875em 3.3125em 0 0.625em;
 }
+.header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.5em;
+  z-index: 2;
+  background-color: hsla(330deg, 3%, 13%, 0.7);
+}
 @media (min-width: 48rem) {
   .header {
     padding: 1.875em 1.875em 0;
@@ -705,7 +739,11 @@ body {
   background-color: transparent;
   cursor: pointer;
   padding: 0;
-  z-index: 1;
+  z-index: 3;
+  transition: transform 0.3s ease-in-out;
+}
+.header-hamburger.rotate {
+  margin-right: -0.1875em;
 }
 @media (min-width: 48rem) {
   .header-hamburger {
@@ -725,10 +763,11 @@ body {
   position: absolute;
   right: -20em;
   top: 0;
-  z-index: 0;
+  z-index: 2;
   background-color: #292929;
   width: 20em;
-  padding-top: 15.5em;
+  min-height: 100vh;
+  padding-top: 10em;
 }
 @media (min-width: 48rem) {
   .header .nav-links-wrapper {
@@ -737,6 +776,7 @@ body {
     background-color: transparent;
     padding-top: 0;
     z-index: 0;
+    min-height: auto;
   }
 }
 .header .nav-links-wrapper .header-logo {
@@ -752,11 +792,11 @@ body {
 .header-nav__menu {
   flex-direction: column;
   text-align: center;
-  margin-top: 1em;
 }
 @media (min-width: 48rem) {
   .header-nav__menu {
     flex-direction: row;
+    margin-top: 1em;
   }
 }
 .header-nav__menu-item {
