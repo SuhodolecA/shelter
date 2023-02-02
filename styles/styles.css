@@ -1122,11 +1122,21 @@ body {
          text-align-last: left;
   }
 }
+@media (min-width: 80rem) {
+  .popup {
+    max-width: 56.25rem;
+  }
+}
 .popup-pic {
   display: none;
   border-radius: 0.5625rem 0 0 0.5625rem;
   overflow: hidden;
   min-width: 21.875rem;
+}
+@media (min-width: 80rem) {
+  .popup-pic {
+    min-width: 31.25rem;
+  }
 }
 .popup-pic__img {
   display: block;
@@ -1150,6 +1160,11 @@ body {
 @media (min-width: 48rem) {
   .popup-description {
     border-radius: 0 0.5625rem 0.5625rem 0;
+  }
+}
+@media (min-width: 80rem) {
+  .popup-description {
+    padding: 3.125em 1.25em 5.5em 1.8125em;
   }
 }
 .popup-description__name {
@@ -1181,6 +1196,16 @@ body {
   .popup-description__specification {
     text-align: left;
     margin: 1.53846em 0 1.53846em;
+  }
+}
+@media (min-width: 80rem) {
+  .popup-description__specification {
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+    color: hsl(0deg, 0%, 33%);
+    margin: 2.66666em 0;
   }
 }
 .popup-description__characteristics-item {

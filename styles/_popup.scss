@@ -13,11 +13,19 @@
     text-align-last: left;
   }
 
+  @include breakpoints-up(xlarge) {
+    max-width: 56.25rem;
+  }
+
   &-pic {
     display: none;
     border-radius: 0.5625rem 0 0 0.5625rem;
     overflow: hidden;
     min-width: 21.875rem;
+
+    @include breakpoints-up(xlarge) {
+      min-width: 31.25rem;
+    }
 
     &__img {
       display: block;
@@ -45,6 +53,10 @@
       border-radius: 0 0.5625rem 0.5625rem 0;
     }
 
+    @include breakpoints-up(xlarge) {
+      padding: 3.125em 1.25em 5.5em 1.8125em;
+    }
+
     &__name {
       @include h3;
       color: $color-black;
@@ -62,6 +74,11 @@
       @include breakpoints-up(large) {
         text-align: left;
         margin: 1.53846em 0 1.53846em;
+      }
+
+      @include breakpoints-up(xlarge) {
+        @include h5;
+        margin: 2.66666em 0;
       }
     }
 
