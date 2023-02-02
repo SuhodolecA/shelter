@@ -1108,12 +1108,33 @@ body {
 .popup {
   max-width: 15rem;
   width: 100%;
-  position: relative;
   position: fixed;
   top: 50%;
   left: 50%;
   z-index: 3;
   transform: translate(-50%, -50%);
+}
+@media (min-width: 48rem) {
+  .popup {
+    max-width: 39.375rem;
+    border-radius: 0.5625rem 0 0 0.5625rem;
+    -moz-text-align-last: left;
+         text-align-last: left;
+  }
+}
+.popup-pic {
+  display: none;
+  border-radius: 0.5625rem 0 0 0.5625rem;
+  overflow: hidden;
+  min-width: 21.875rem;
+}
+.popup-pic__img {
+  display: block;
+}
+@media (min-width: 48rem) {
+  .popup-pic {
+    display: block;
+  }
 }
 .popup-close {
   background: url("../assets/images/popup/popup-cross-icon.svg") no-repeat center center;
@@ -1125,6 +1146,11 @@ body {
   background-color: hsl(0deg, 0%, 98%);
   border-radius: 0.5625rem;
   padding: 0.625em;
+}
+@media (min-width: 48rem) {
+  .popup-description {
+    border-radius: 0 0.5625rem 0.5625rem 0;
+  }
 }
 .popup-description__name {
   font-weight: 400;
@@ -1150,6 +1176,12 @@ body {
   letter-spacing: 0.06em;
   color: hsl(0deg, 0%, 0%);
   margin: 1.53846em 0 1.84615em;
+}
+@media (min-width: 48rem) {
+  .popup-description__specification {
+    text-align: left;
+    margin: 1.53846em 0 1.53846em;
+  }
 }
 .popup-description__characteristics-item {
   padding-left: 0.875em;
