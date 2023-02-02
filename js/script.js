@@ -5,6 +5,11 @@ const navigationMenuLinks = document.querySelectorAll(".nav-link");
 const pageOverlay = document.querySelector("#page-overlay");
 const header = document.querySelector("#header-section");
 const body = document.querySelector("body");
+const carouselCardsList = document.querySelectorAll(
+  ".our-friends-carousel__track-card"
+);
+const popup = document.querySelector("#popup-section");
+const popupCloseBtn = document.querySelector("#close-btn");
 
 // helper functions
 // ==========================================
@@ -64,9 +69,24 @@ navigationMenuLinks.forEach((link) => {
 
 //overlay
 pageOverlay.addEventListener("click", () => {
-  hamburgerBtn.classList.remove("rotate");
-  removeOverlay();
-  closeMenu();
+  if (navigationMenu.classList.contains("mobile-menu")) {
+    if (hamburgerBtn.classList.contains("rotate")) {
+      console.log(hamburgerBtn);
+      hamburgerBtn.classList.remove("rotate");
+      header.classList.remove("hide");
+      closeMenu();
+      removeOverlay();
+    } else {
+      removeSlideInOutAnimation();
+      header.classList.remove("hide");
+      removeOverlay();
+      popup.classList.add("hide");
+    }
+  } else {
+    removeOverlay();
+    header.classList.remove("hide");
+    popup.classList.add("hide");
+  }
 });
 
 // window resize(remove side animation from hamburger menu for better view on different sizes)
@@ -75,6 +95,7 @@ window.addEventListener("resize", () => {
     removeSlideInOutAnimation();
     navigationMenu.classList.remove("mobile-menu");
     hamburgerBtn.classList.remove("rotate");
+    header.classList.remove("hide");
     removeOverlay();
   } else {
     navigationMenu.classList.add("mobile-menu");
@@ -104,3 +125,21 @@ window.addEventListener("load", () => {
     navigationMenu.classList.add("mobile-menu");
   }
 });
+
+// popup ============================
+carouselCardsList.forEach((card) => {
+  card.addEventListener("click", () => {
+    header.classList.add("hide");
+    addOverlay();
+    popup.classList.remove("hide");
+  });
+});
+
+popupCloseBtn.addEventListener("click", () => {
+  removeSlideInOutAnimation();
+  header.classList.remove("hide");
+  removeOverlay();
+  popup.classList.add("hide");
+});
+
+// ============================
