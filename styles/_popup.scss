@@ -1,0 +1,63 @@
+.popup {
+  max-width: 15rem;
+  width: 100%;
+  // border: 1px solid red;
+  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  &-close {
+    background: url("../assets/images/popup/popup-cross-icon.svg") no-repeat
+      center center;
+    position: absolute;
+    top: -3.25rem;
+    right: -1.625rem;
+  }
+
+  &-description {
+    background-color: $color-light-s;
+    border-radius: 0.5625rem;
+    padding: 0.625em;
+
+    &__name {
+      @include h3;
+      color: $color-black;
+      margin-bottom: 0.28571em;
+    }
+
+    &__title {
+      @include h4($color-black);
+    }
+
+    &__specification {
+      @include specification-text;
+      margin: 1.53846em 0 1.84615em;
+    }
+
+    &__characteristics {
+      &-item {
+        padding-left: 0.875em;
+        position: relative;
+
+        & + & {
+          margin-top: 0.3125em;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 0.25rem;
+          height: 0.25rem;
+          background-color: $color-primary;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}

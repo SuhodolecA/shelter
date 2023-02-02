@@ -31,7 +31,7 @@ const removeSlideInOutAnimation = () => {
   navigationMenu.classList.remove("slide-in");
   navigationMenu.classList.remove("slide-out");
 };
-// ================================================
+// ==================//==============================
 
 // burger menu
 hamburgerBtn.addEventListener("click", () => {

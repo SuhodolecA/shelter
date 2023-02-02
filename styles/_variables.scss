@@ -1,13 +1,14 @@
 // Colors
-$color-light-xl: #ffffff;
-$color-light-l: #f6f6f6;
-$color-light-s: #fafafa;
-$color-dark-s: #cdcdcd;
-$color-dark-m: #b2b2b2;
-$color-dark-l: #545454;
-$color-dark-xl: #4c4c4c;
-$color-dark-2xl: #444444;
-$color-dark-3xl: #292929;
-$color-primary: #f1cdb3;
-$color-primary-light: #fddcc4;
+$color-light-xl: hsl(0, 0%, 100%);
+$color-light-l: hsl(0, 0%, 96%);
+$color-light-s: hsl(0, 0%, 98%);
+$color-dark-s: hsl(0, 0%, 80%);
+$color-dark-m: hsl(0, 0%, 70%);
+$color-dark-l: hsl(0, 0%, 33%);
+$color-dark-xl: hsl(0, 0%, 30%);
+$color-dark-2xl: hsl(0, 0%, 27%);
+$color-dark-3xl: hsl(0, 0%, 16%);
+$color-primary: hsl(25, 69%, 82%);
+$color-primary-light: hsl(25, 93%, 88%);
 $color-primary-background: hsl(330, 3%, 13%);
+$color-black: hsl(0, 0%, 0%);
