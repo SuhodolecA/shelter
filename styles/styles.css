@@ -400,6 +400,19 @@ h6 {
   }
 }
 
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -483,19 +496,6 @@ h6 {
 
 .stop-scroll {
   overflow: hidden;
-}
-
-.flex {
-  display: flex;
-}
-.flex-jc-sb {
-  justify-content: space-between;
-}
-.flex-jc-c {
-  justify-content: center;
-}
-.flex-ai-c {
-  align-items: center;
 }
 
 .container {
@@ -1113,6 +1113,7 @@ body {
   left: 50%;
   z-index: 3;
   transform: translate(-50%, -50%);
+  background-color: hsl(0deg, 0%, 98%);
 }
 @media (min-width: 48rem) {
   .popup {

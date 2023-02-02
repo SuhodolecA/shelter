@@ -6,6 +6,7 @@
   left: 50%;
   z-index: 3;
   transform: translate(-50%, -50%);
+  background-color: $color-light-s;
 
   @include breakpoints-up(large) {
     max-width: 39.375rem;

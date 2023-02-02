@@ -61,6 +61,23 @@ h6 {
   }
 }
 
+// Flexbox styles
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
 // overlay
 .overlay {
   position: absolute;
@@ -151,23 +168,6 @@ h6 {
 
 .stop-scroll {
   overflow: hidden;
-}
-
-// Flexbox styles
-.flex {
-  display: flex;
-
-  &-jc-sb {
-    justify-content: space-between;
-  }
-
-  &-jc-c {
-    justify-content: center;
-  }
-
-  &-ai-c {
-    align-items: center;
-  }
 }
 
 // container
