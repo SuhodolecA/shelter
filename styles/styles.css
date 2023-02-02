@@ -698,6 +698,10 @@ body {
   padding: 0.5em;
   z-index: 2;
   background-color: hsla(330deg, 3%, 13%, 0.7);
+  box-shadow: 0 0.3125rem 0.3125rem hsla(0deg, 0%, 0%, 0.5);
+}
+.header.fixed .nav-links-wrapper .header-logo {
+  top: 0.8em;
 }
 @media (min-width: 48rem) {
   .header {
