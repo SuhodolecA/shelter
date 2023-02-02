@@ -89,6 +89,14 @@ pageOverlay.addEventListener("click", () => {
   }
 });
 
+pageOverlay.addEventListener("mouseover", () => {
+  popupCloseBtn.classList.add("hover-close-btn");
+});
+
+pageOverlay.addEventListener("mouseout", () => {
+  popupCloseBtn.classList.remove("hover-close-btn");
+});
+
 // window resize(remove side animation from hamburger menu for better view on different sizes)
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 768) {

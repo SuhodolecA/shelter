@@ -474,6 +474,10 @@ h6 {
   background-color: hsl(25deg, 93%, 88%);
   box-shadow: inset 0 0 0 0.125rem hsl(25deg, 93%, 88%);
 }
+.button-round.hover-close-btn {
+  background-color: hsl(25deg, 93%, 88%);
+  box-shadow: inset 0 0 0 0.125rem hsl(25deg, 93%, 88%);
+}
 
 .visually-hidden {
   position: absolute;
