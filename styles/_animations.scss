@@ -110,3 +110,91 @@
 .slide-out {
   animation: slide-out 0.5s ease-in-out forwards;
 }
+
+// ====== carousel animations ======
+
+// ===========320 ==================
+@keyframes move-left-320 {
+  from {
+    left: -286px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+.transition-left-320 {
+  animation: move-left-320 0.5s linear;
+}
+@keyframes move-right-320 {
+  from {
+    // left: -270px;
+    left: -286px;
+  }
+  to {
+    // left: -540px;
+    left: -572px;
+  }
+}
+
+.transition-right-320 {
+  animation: move-right-320 0.5s linear;
+}
+
+// =========== /320 ==================
+
+// ===========768 ==================
+@keyframes move-left-768 {
+  from {
+    left: -620px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+.transition-left-768 {
+  animation: move-left-768 0.7s linear;
+}
+@keyframes move-right-768 {
+  from {
+    left: -620px;
+  }
+  to {
+    left: -1240px;
+  }
+}
+
+.transition-right-768 {
+  animation: move-right-768 0.7s linear;
+}
+// =========== /768 ==================
+
+// ===========1280 ==================
+@keyframes move-left-1280 {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+.transition-left-1280 {
+  animation: move-left-1280 0.9s linear;
+}
+@keyframes move-right-1280 {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: -2160px;
+  }
+}
+
+.transition-right-1280 {
+  animation: move-right-1280 0.9s linear;
+}
+// =========== /1280 ==================
+
+// ======  /carousel animations ======

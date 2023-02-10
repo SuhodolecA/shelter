@@ -175,6 +175,22 @@ h6 {
   overflow: hidden;
 }
 
+.carousel-320 {
+  // left: -16.875rem; // -270px
+  left: -17.875rem; // -286px
+}
+
+.carousel-768 {
+  //left: -36.25rem; // -580px
+  //left: -38.25rem; // -612px
+  left: -38.75rem; // -620px
+}
+
+.carousel-1280 {
+  left: -61.875rem; // -990px
+  left: -67.5rem; // -1080px
+}
+
 // container
 .container {
   max-width: 75rem;
