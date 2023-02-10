@@ -23,21 +23,6 @@ const nextItem = document.querySelector("#next-item");
 let startCurrentCardsIds = [];
 let windowRange;
 let petsData;
-// fetch("../../assets/data/pets.json")
-//   .then((response) => {
-//     // console.log(response.json());
-//     return response.json();
-//   })
-//   .then((response) => (petsData = response));
-// assets\data\pets.json
-// fetch("assets/data/pets.json")
-//   .then((response) => {
-//     console.log("response", response.json());
-//     return response.json();
-//   })
-//   .then((response) => (petsData = response));
-
-// console.log("petsData", petsData);
 
 // helper functions
 // ==========================================
@@ -95,20 +80,103 @@ navigationMenuLinks.forEach((link) => {
   });
 });
 
+// popup ============================
+const setPopupData = (petObj) => {
+  const popupPictureSource = popup.querySelector("source"); //sourceImg
+  popupPictureSource.srcset = petObj.sourceImg;
+  const popupImg = popup.querySelector(".popup-pic__img");
+  popupImg.src = petObj.popupImg;
+  popupImg.alt = petObj.alt;
+  const popupName = popup.querySelector(".popup-description__name");
+  popupName.textContent = petObj.name;
+  const popupTitle = popup.querySelector(".popup-description__title");
+  popupTitle.textContent = `${petObj.type} - ${petObj.breed}`;
+  const popupSpecification = popup.querySelector(
+    ".popup-description__specification"
+  );
+  popupSpecification.textContent = petObj.description;
+  const descriptionCharacteristicsList = popup.querySelectorAll(
+    ".popup-description__characteristics-item__text-value"
+  );
+  const petAge = descriptionCharacteristicsList[0];
+  petAge.textContent = petObj.age;
+  const petInoculations = descriptionCharacteristicsList[1];
+  petInoculations.textContent = petObj.inoculations.join(", ");
+  const petDiseases = descriptionCharacteristicsList[2];
+  petDiseases.textContent = petObj.diseases.join(", ");
+  const petParasites = descriptionCharacteristicsList[3];
+  petParasites.textContent = petObj.parasites.join(", ");
+  // console.log(petObj.popupImg);
+
+  /*
+  popup-description__characteristics-item__text-value
+  popup-pic__img
+  popup-description__name
+  popup-description__title
+  popup-description__specification
+   */
+  // popupPictureSource.;
+  // console.log("popupPictureSource", popupPictureSource);
+  // console.log("popup", popup);
+  // console.log("popupPictureSource", popupPictureSource);
+  // console.log("popupImg", popupImg);
+  // console.log("popupName", popupName);
+  // console.log("popupTitle", popupTitle);
+  // console.log("popupSpecification", popupSpecification);
+};
+
+// setPopupData();
+const openPopup = (event) => {
+  const petId = +event.target.closest(".our-friends-carousel__track-card").id;
+  const currentPet = petsData[petId];
+  setPopupData(currentPet);
+  // console.log("currentPet", currentPet);
+  header.classList.add("hide");
+  addOverlay();
+  popup.classList.remove("hide");
+  // setPopupData();
+};
+
+const closePopup = () => {
+  removeSlideInOutAnimation();
+  header.classList.remove("hide");
+  removeOverlay();
+  popup.classList.add("hide");
+};
+
+// carouselCardsList.forEach((card) => {
+//   card.addEventListener("click", () => {
+//     header.classList.add("hide");
+//     addOverlay();
+//     popup.classList.remove("hide");
+//   });
+// });
+
+// popupCloseBtn.addEventListener("click", () => {
+//   removeSlideInOutAnimation();
+//   header.classList.remove("hide");
+//   removeOverlay();
+//   popup.classList.add("hide");
+// });
+
+popupCloseBtn.addEventListener("click", closePopup);
+
+// ============================
+
 //overlay
 pageOverlay.addEventListener("click", () => {
   if (navigationMenu.classList.contains("mobile-menu")) {
     if (hamburgerBtn.classList.contains("rotate")) {
-      // console.log(hamburgerBtn);
       hamburgerBtn.classList.remove("rotate");
       header.classList.remove("hide");
       closeMenu();
       removeOverlay();
     } else {
-      removeSlideInOutAnimation();
-      header.classList.remove("hide");
-      removeOverlay();
-      popup.classList.add("hide");
+      closePopup();
+      // removeSlideInOutAnimation();
+      // header.classList.remove("hide");
+      // removeOverlay();
+      // popup.classList.add("hide");
     }
   } else {
     removeOverlay();
@@ -125,24 +193,6 @@ pageOverlay.addEventListener("mouseover", () => {
 pageOverlay.addEventListener("mouseout", () => {
   popupCloseBtn.classList.remove("hover-close-btn");
 });
-
-// popup ============================
-// carouselCardsList.forEach((card) => {
-//   card.addEventListener("click", () => {
-//     header.classList.add("hide");
-//     addOverlay();
-//     popup.classList.remove("hide");
-//   });
-// });
-
-popupCloseBtn.addEventListener("click", () => {
-  removeSlideInOutAnimation();
-  header.classList.remove("hide");
-  removeOverlay();
-  popup.classList.add("hide");
-});
-
-// ============================
 
 //carousel =====================================
 //  create pet card
@@ -183,9 +233,24 @@ const createCard = (petObj) => {
 
   card.append(cardImg);
   card.append(cardContentContainer);
-
+  card.addEventListener("click", openPopup);
   return card;
 };
+
+// set event listener to generated cards for proper popup work
+
+// const setCarouselCardsEvents = () => {
+//   const carouselCardsList = currentItem.querySelectorAll(
+//     ".our-friends-carousel__track-card"
+//   );
+//   carouselCardsList.forEach((card) => {
+//     card.addEventListener("click", () => {
+//       header.classList.add("hide");
+//       addOverlay();
+//       popup.classList.remove("hide");
+//     });
+//   });
+// };
 
 const clearCarouselTrackTransition = () => {
   carouselTrack.classList.remove("transition-right-320");
@@ -229,7 +294,6 @@ const generateSetOfCardsIds = (numberOfCards) => {
       setOfCardsId.push(id);
     }
   }
-  // console.log("setOfCardsId", setOfCardsId);
   return setOfCardsId;
 };
 
@@ -293,7 +357,6 @@ const movePrev = () => {
   carouselBtnNext.disabled = true;
   const itemsAmount = cardsInsideItem();
   const newSetOfIds = generateSetOfCardsIds(itemsAmount);
-  // console.log("newSetOfIds", newSetOfIds);
   clearCarouselItem(prevItem);
   fillCardItem(newSetOfIds, prevItem);
   startCurrentCardsIds = newSetOfIds;
@@ -307,7 +370,6 @@ const moveNext = () => {
   carouselBtnPrev.disabled = true;
   const itemsAmount = cardsInsideItem();
   const newSetOfIds = generateSetOfCardsIds(itemsAmount);
-  // console.log("newSetOfIds", newSetOfIds);
   clearCarouselItem(nextItem);
   fillCardItem(newSetOfIds, nextItem);
   startCurrentCardsIds = newSetOfIds;
@@ -325,17 +387,17 @@ window.addEventListener("resize", () => {
     navigationMenu.classList.remove("mobile-menu");
     hamburgerBtn.classList.remove("rotate");
     header.classList.remove("hide");
-    removeOverlay();
+    removeOverlay(); // am I need this function here?!!!!!! it breaks overlay in popup active state
+    // closePopup();
   } else {
     navigationMenu.classList.add("mobile-menu");
   }
+
   // update carousel items only if innerWidth outside rage(prevent card flickering)
   if (calculateRange(window.innerWidth) !== windowRange) {
     windowRange = calculateRange(window.innerWidth);
-    // generateStartsCardsId();
     const itemsAmount = cardsInsideItem();
     startCurrentCardsIds = generateSetOfCardsIds(itemsAmount);
-    // console.log("startCurrentCardsIds", startCurrentCardsIds);
     createCarousel();
   }
 });
@@ -371,11 +433,7 @@ window.addEventListener("load", () => {
     .then(() => {
       const itemsAmount = cardsInsideItem();
       startCurrentCardsIds = generateSetOfCardsIds(itemsAmount);
-      // console.log("startCurrentCardsIds", startCurrentCardsIds);
-      // console.log("startCurrentCardsIds", startCurrentCardsIds);
       createCarousel();
-      // generateStartsCardsId();
-      // createCarousel();
     });
 });
 
@@ -480,15 +538,6 @@ window.addEventListener("load", () => {
 //   carouselBtnPrev.disabled = false;
 //   carouselBtnNext.disabled = false;
 // });
-
-// const clearCarouselTrackTransition = () => {
-//   carouselTrack.classList.remove("transition-right-320");
-//   carouselTrack.classList.remove("transition-right-768");
-//   carouselTrack.classList.remove("transition-right-1280");
-//   carouselTrack.classList.remove("transition-left-320");
-//   carouselTrack.classList.remove("transition-left-768");
-//   carouselTrack.classList.remove("transition-left-1280");
-// };
 
 // const fillCarouselItems = (cardAmount) => {
 //   clearCarouselItems();

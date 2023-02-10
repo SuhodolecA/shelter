@@ -1156,6 +1156,7 @@ body {
 }
 .popup-pic__img {
   display: block;
+  height: 100%;
 }
 @media (min-width: 48rem) {
   .popup-pic {
@@ -1199,6 +1200,11 @@ body {
   letter-spacing: 0.06em;
   color: hsl(0deg, 0%, 0%);
 }
+@media (min-width: 48rem) {
+  .popup-description__title {
+    text-align: left;
+  }
+}
 .popup-description__specification {
   font-weight: 400;
   font-size: 0.8125rem;
@@ -1223,6 +1229,9 @@ body {
     color: hsl(0deg, 0%, 33%);
     margin: 2.66666em 0;
   }
+}
+.popup-description__characteristics {
+  text-align: left;
 }
 .popup-description__characteristics-item {
   padding-left: 0.875em;

@@ -30,6 +30,7 @@
 
     &__img {
       display: block;
+      height: 100%;
     }
 
     @include breakpoints-up(large) {
@@ -49,6 +50,7 @@
     background-color: $color-light-s;
     border-radius: 0.5625rem;
     padding: 0.625em;
+    // text-align: left;
 
     @include breakpoints-up(large) {
       border-radius: 0 0.5625rem 0.5625rem 0;
@@ -66,6 +68,9 @@
 
     &__title {
       @include h4($color-black);
+      @include breakpoints-up(large) {
+        text-align: left;
+      }
     }
 
     &__specification {
@@ -84,6 +89,8 @@
     }
 
     &__characteristics {
+      text-align: left;
+
       &-item {
         padding-left: 0.875em;
         position: relative;
