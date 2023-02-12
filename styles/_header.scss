@@ -167,8 +167,30 @@
     background-color: $color-light-xl;
     padding: 1.875em 3.125em 1.875em 0.625em;
 
+    @include breakpoints-up(large) {
+      padding: 1.875em;
+    }
+
     &-nav {
-      padding-right: 3px;
+      padding-right: 0.1875em;
+
+      @include breakpoints-up(large) {
+        padding-right: 0;
+      }
+
+      &__menu {
+        &-item {
+          &__link {
+            color: $color-dark-l;
+            letter-spacing: 0.1px;
+
+            &:hover,
+            &:focus {
+              color: $color-dark-3xl;
+            }
+          }
+        }
+      }
     }
 
     &-logo {

@@ -35,6 +35,12 @@ a:hover {
   }
 }
 
+.our-pets {
+  .nav-link.current-link {
+    color: $color-dark-3xl;
+  }
+}
+
 // Lists
 ul {
   list-style-type: none;

@@ -367,6 +367,10 @@ a:hover {
   border-bottom-color: hsl(25deg, 69%, 82%);
 }
 
+.our-pets .nav-link.current-link {
+  color: hsl(0deg, 0%, 16%);
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -859,8 +863,25 @@ body {
   background-color: hsl(0deg, 0%, 100%);
   padding: 1.875em 3.125em 1.875em 0.625em;
 }
+@media (min-width: 48rem) {
+  .our-pets .header {
+    padding: 1.875em;
+  }
+}
 .our-pets .header-nav {
-  padding-right: 3px;
+  padding-right: 0.1875em;
+}
+@media (min-width: 48rem) {
+  .our-pets .header-nav {
+    padding-right: 0;
+  }
+}
+.our-pets .header-nav__menu-item__link {
+  color: hsl(0deg, 0%, 33%);
+  letter-spacing: 0.1px;
+}
+.our-pets .header-nav__menu-item__link:hover, .our-pets .header-nav__menu-item__link:focus {
+  color: hsl(0deg, 0%, 16%);
 }
 .our-pets .header-logo__title-text {
   color: hsl(0deg, 0%, 33%);
