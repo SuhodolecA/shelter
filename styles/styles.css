@@ -855,6 +855,24 @@ body {
   color: hsl(0deg, 0%, 98%);
 }
 
+.our-pets .header {
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 1.875em 3.125em 1.875em 0.625em;
+}
+.our-pets .header-nav {
+  padding-right: 3px;
+}
+.our-pets .header-logo__title-text {
+  color: hsl(0deg, 0%, 33%);
+}
+.our-pets .header-logo__subtitle {
+  color: hsl(0deg, 0%, 16%);
+  margin-top: 0.6923em;
+}
+.our-pets .header-hamburger__line {
+  background-color: hsl(0deg, 0%, 0%);
+}
+
 .hero {
   padding: 9.375em 0.625em 0;
   background: hsl(330deg, 3%, 13%);

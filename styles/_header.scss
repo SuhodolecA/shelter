@@ -160,3 +160,34 @@
     }
   }
 }
+
+// our pets page styles
+.our-pets {
+  .header {
+    background-color: $color-light-xl;
+    padding: 1.875em 3.125em 1.875em 0.625em;
+
+    &-nav {
+      padding-right: 3px;
+    }
+
+    &-logo {
+      &__title {
+        &-text {
+          color: $color-dark-l;
+        }
+      }
+
+      &__subtitle {
+        color: $color-dark-3xl;
+        margin-top: 0.6923em;
+      }
+    }
+
+    &-hamburger {
+      &__line {
+        background-color: $color-black;
+      }
+    }
+  }
+}
