@@ -878,6 +878,8 @@ body {
 }
 .our-pets .header-nav__menu-item__link {
   color: hsl(0deg, 0%, 33%);
+}
+.our-pets .header-nav__menu-item__link:not(:first-child) {
   letter-spacing: 0.1px;
 }
 .our-pets .header-nav__menu-item__link:hover, .our-pets .header-nav__menu-item__link:focus {

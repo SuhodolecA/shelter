@@ -182,7 +182,10 @@
         &-item {
           &__link {
             color: $color-dark-l;
-            letter-spacing: 0.1px;
+
+            &:not(:first-child) {
+              letter-spacing: 0.1px;
+            }
 
             &:hover,
             &:focus {
