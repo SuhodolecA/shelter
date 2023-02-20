@@ -6,6 +6,9 @@
   @include breakpoints-up(large) {
     padding: 12.5em 1.875em 4.75em;
   }
+  @include breakpoints-up(xlarge) {
+    padding: 12.5em 2.5em 6.25em;
+  }
 
   &-title {
     // text-align: center;
@@ -24,6 +27,11 @@
       flex-direction: row;
       flex-wrap: wrap;
       padding: 1.875em 4em 2.5em;
+    }
+
+    @include breakpoints-up(xlarge) {
+      padding: 0.9375em 0;
+      margin: 2.8125em 0;
     }
 
     &__item {
