@@ -1,0 +1,33 @@
+.pets {
+  background-color: $color-light-l;
+  padding: 10.17em 0.625em 2.625em;
+  text-align: center;
+
+  &-title {
+    // text-align: center;
+    // margin-bottom: 1.68em;
+  }
+
+  &-cards {
+    padding: 2.625em 0.9375em;
+    flex-direction: column;
+    gap: 1.875em;
+  }
+
+  &-nav {
+    &__pagination {
+      gap: 0.625em;
+      &-item {
+        &__link {
+          display: inline-block;
+          @include h4($color-dark-3xl);
+
+          &-text {
+            position: relative;
+            top: 0.7em;
+          }
+        }
+      }
+    }
+  }
+}

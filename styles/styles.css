@@ -371,6 +371,37 @@ a:hover {
   color: hsl(0deg, 0%, 16%);
 }
 
+.pet-card {
+  min-width: 16.875rem;
+  background: hsl(0deg, 0%, 98%);
+  overflow: hidden;
+  border-radius: 0.5625em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.pet-card:hover {
+  background-color: hsl(0deg, 0%, 100%);
+}
+.pet-card:hover .button-secondary {
+  background-color: hsl(25deg, 93%, 88%);
+  box-shadow: inset 0 0 0 0.125rem hsl(25deg, 93%, 88%);
+}
+.pet-card__img {
+  vertical-align: middle;
+}
+.pet-card__content {
+  padding: 1.875em 0;
+}
+.pet-card__content-title {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-size: 1.25em;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  color: hsl(0deg, 0%, 33%);
+  margin-bottom: 1.5em;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -481,6 +512,23 @@ h6 {
 .button-round.hover-close-btn {
   background-color: hsl(25deg, 93%, 88%);
   box-shadow: inset 0 0 0 0.125rem hsl(25deg, 93%, 88%);
+}
+.button-round.inactive {
+  color: hsl(0deg, 0%, 80%);
+  box-shadow: inset 0 0 0 0.125rem hsl(0deg, 0%, 80%);
+  cursor: not-allowed;
+}
+.button-round.inactive:hover {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 0.125rem hsl(0deg, 0%, 80%);
+}
+.button-round.counter {
+  background-color: hsl(25deg, 69%, 82%);
+  cursor: unset;
+}
+.button-round.counter:hover {
+  background-color: hsl(25deg, 69%, 82%);
+  box-shadow: inset 0 0 0 0.125rem hsl(25deg, 69%, 82%);
 }
 
 .visually-hidden {
@@ -1108,36 +1156,6 @@ body {
     gap: 5.625em;
   }
 }
-.our-friends-carousel__track-card {
-  min-width: 16.875rem;
-  background: hsl(0deg, 0%, 98%);
-  overflow: hidden;
-  border-radius: 0.5625em;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-.our-friends-carousel__track-card:hover {
-  background-color: hsl(0deg, 0%, 100%);
-}
-.our-friends-carousel__track-card:hover .button-secondary {
-  background-color: hsl(25deg, 93%, 88%);
-  box-shadow: inset 0 0 0 0.125rem hsl(25deg, 93%, 88%);
-}
-.our-friends-carousel__track-card__img {
-  vertical-align: middle;
-}
-.our-friends-carousel__track-card__content {
-  padding: 1.875em 0;
-}
-.our-friends-carousel__track-card__content-title {
-  font-family: "Georgia";
-  font-weight: 400;
-  font-size: 1.25em;
-  line-height: 1.15;
-  letter-spacing: 0.06em;
-  color: hsl(0deg, 0%, 33%);
-  margin-bottom: 1.5em;
-}
 .our-friends-controls {
   display: grid;
   grid-template-columns: repeat(2, 3.25rem);
@@ -1650,4 +1668,30 @@ body {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+}
+
+.pets {
+  background-color: hsl(0deg, 0%, 96%);
+  padding: 10.17em 0.625em 2.625em;
+  text-align: center;
+}
+.pets-cards {
+  padding: 2.625em 0.9375em;
+  flex-direction: column;
+  gap: 1.875em;
+}
+.pets-nav__pagination {
+  gap: 0.625em;
+}
+.pets-nav__pagination-item__link {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  color: hsl(0deg, 0%, 16%);
+}
+.pets-nav__pagination-item__link-text {
+  position: relative;
+  top: 0.7em;
 }/*# sourceMappingURL=styles.css.map */
