@@ -3,18 +3,39 @@
   padding: 10.17em 0.625em 2.625em;
   text-align: center;
 
+  @include breakpoints-up(large) {
+    padding: 12.5em 1.875em 4.75em;
+  }
+
   &-title {
     // text-align: center;
     // margin-bottom: 1.68em;
+    // @include breakpoints-up(large) {
+    //   margin-top: 0.57142em;
+    // }
   }
 
   &-cards {
     padding: 2.625em 0.9375em;
     flex-direction: column;
     gap: 1.875em;
+
+    @include breakpoints-up(large) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 1.875em 4em 2.5em;
+    }
+
+    &__item {
+      max-width: 16.875rem;
+    }
   }
 
   &-nav {
+    @include breakpoints-up(large) {
+      max-width: 21.25em;
+      margin: 0 auto;
+    }
     &__pagination {
       gap: 0.625em;
       &-item {

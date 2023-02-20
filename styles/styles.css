@@ -1675,10 +1675,31 @@ body {
   padding: 10.17em 0.625em 2.625em;
   text-align: center;
 }
+@media (min-width: 48rem) {
+  .pets {
+    padding: 12.5em 1.875em 4.75em;
+  }
+}
 .pets-cards {
   padding: 2.625em 0.9375em;
   flex-direction: column;
   gap: 1.875em;
+}
+@media (min-width: 48rem) {
+  .pets-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1.875em 4em 2.5em;
+  }
+}
+.pets-cards__item {
+  max-width: 16.875rem;
+}
+@media (min-width: 48rem) {
+  .pets-nav {
+    max-width: 21.25em;
+    margin: 0 auto;
+  }
 }
 .pets-nav__pagination {
   gap: 0.625em;
