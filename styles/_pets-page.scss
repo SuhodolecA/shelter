@@ -40,14 +40,15 @@
   }
 
   &-nav {
+    max-width: 18.75em;
+    margin: 0 auto;
     @include breakpoints-up(large) {
       max-width: 21.25em;
-      margin: 0 auto;
     }
     &__pagination {
       gap: 0.625em;
       &-item {
-        &__link {
+        &__btn {
           display: inline-block;
           @include h4($color-dark-3xl);
 

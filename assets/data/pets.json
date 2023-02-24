@@ -118,20 +118,5 @@
     "inoculations": ["bordetella bronchiseptica", "leptospirosis"],
     "diseases": ["deafness", "blindness"],
     "parasites": ["lice", "fleas"]
-  },
-  {
-    "petId": 8,
-    "name": "Archi",
-    "img": "../../assets/images/our-pets/our-pets-archi.jpg",
-    "popupImg": "../../assets/images/popup/popup-archi-768.jpg",
-    "sourceImg": "../../assets/images/popup/popup-archi-1280.jpg",
-    "alt": "little white puppy",
-    "type": "Dog",
-    "breed": "Maltese",
-    "description": "This cute boy, Archi, is one years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Archi has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
-    "age": "1 years",
-    "inoculations": ["bordetella bronchiseptica", "leptospirosis"],
-    "diseases": ["deafness", "little"],
-    "parasites": ["lice", "fleas"]
   }
 ]

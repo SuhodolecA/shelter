@@ -6,6 +6,7 @@ import {
   setWindowRange,
   setCurrentCardsIds,
   setPetsData,
+  ourPetsSection,
 } from "./globalVars.js";
 
 import {
@@ -13,12 +14,15 @@ import {
   removeOverlay,
   calculateRange,
   cardsInsideItem,
+  fixingHeader,
 } from "./helperFunctions.js";
 
 import {
   generateSetOfCardsIds,
   createCarousel,
 } from "./carouselFunctionality.js";
+
+import { paginationFunctionality } from "./paginationFunctionality.js";
 
 const windowResizeFunctionality = () => {
   window.addEventListener("resize", () => {
@@ -44,24 +48,30 @@ const windowResizeFunctionality = () => {
 
 const windowScrollFunctionality = () => {
   window.addEventListener("scroll", () => {
-    if (
-      (window.innerWidth >= 320 &&
-        window.innerWidth < 768 &&
-        window.scrollY >= 719) ||
-      (window.innerWidth >= 768 && window.scrollY >= 1140) ||
-      (window.innerWidth >= 1280 && window.scrollY >= 890)
-    ) {
-      header.classList.add("fixed");
-    } else {
-      header.classList.remove("fixed");
-    }
+    const innerWidth = window.innerWidth;
+    const scrollY = window.scrollY;
+    fixingHeader(innerWidth, scrollY);
+    // if (
+    //   (window.innerWidth >= 320 &&
+    //     window.innerWidth < 768 &&
+    //     window.scrollY >= 719) ||
+    //   (window.innerWidth >= 768 && window.scrollY >= 1140) ||
+    //   (window.innerWidth >= 1280 && window.scrollY >= 890)
+    // ) {
+    //   header.classList.add("fixed");
+    // } else {
+    //   header.classList.remove("fixed");
+    // }
   });
 };
 
 const windowLoadFunctionality = () => {
+  const innerWidth = window.innerWidth;
+  const scrollY = window.scrollY;
+  fixingHeader(innerWidth, scrollY);
   window.addEventListener("load", () => {
-    setWindowRange(calculateRange(window.innerWidth));
-    if (window.innerWidth >= 768) {
+    setWindowRange(calculateRange(innerWidth));
+    if (innerWidth >= 768) {
       navigationMenu.classList.remove("mobile-menu");
     } else {
       navigationMenu.classList.add("mobile-menu");
@@ -72,9 +82,13 @@ const windowLoadFunctionality = () => {
       })
       .then((response) => setPetsData(response))
       .then(() => {
-        const itemsAmount = cardsInsideItem();
-        setCurrentCardsIds(generateSetOfCardsIds(itemsAmount));
-        createCarousel();
+        if (ourPetsSection) {
+          paginationFunctionality();
+        } else {
+          const itemsAmount = cardsInsideItem();
+          setCurrentCardsIds(generateSetOfCardsIds(itemsAmount));
+          createCarousel();
+        }
       });
   });
 };

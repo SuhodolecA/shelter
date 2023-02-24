@@ -1,4 +1,10 @@
-import { header, popup, popupCloseBtn, petsData } from "./globalVars.js";
+import {
+  header,
+  popup,
+  popupCloseBtn,
+  petsData,
+  hamburgerBtn,
+} from "./globalVars.js";
 
 import {
   addOverlay,
@@ -35,17 +41,26 @@ const setPopupData = (petObj) => {
 };
 
 const openPopup = (event) => {
-  const petId = +event.target.closest(".our-friends-carousel__track-card").id;
+  // console.log(
+  //   "event.target",
+  //   event.target.closest(".our-friends-carousel__track-card")
+  // );
+  console.log("e.target", event.target);
+  console.log("e.currentTarget", event.currentTarget);
+  const petId = +event.target.closest(".pet-card").id;
   const currentPet = petsData[petId];
   setPopupData(currentPet);
-  header.classList.add("hide");
+  hamburgerBtn.classList.add("hide");
+  // header.classList.add("hide");
+  // console.log("overlay");
   addOverlay();
   popup.classList.remove("hide");
 };
 
 const closePopup = () => {
   removeSlideInOutAnimation();
-  header.classList.remove("hide");
+  // header.classList.remove("hide");
+  hamburgerBtn.classList.remove("hide");
   removeOverlay();
   popup.classList.add("hide");
 };

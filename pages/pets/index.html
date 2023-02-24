@@ -10,16 +10,17 @@
 </head>
 
 <body>
-    <div id="page-overlay" class="overlay hide"></div>
+    <!-- <div id="page-overlay" class="overlay hide"></div> -->
     <!-- header -->
     <div class="our-pets">
         <header id="header-section" class="header">
+            <div id="page-overlay" class="overlay hide"></div>
             <div class="container">
                 <nav class="header-nav flex flex-jc-sb">
                     <div class="header-nav-wrapper flex flex-jc-sb flex-ai-c">
                         <div class="header-logo">
                             <h1 class="header-logo__title">
-                                <a href="#hero-section" class="header-logo__title-text">Cozy House</a>
+                                <a href="#our-pets" class="header-logo__title-text">Cozy House</a>
                             </h1>
                             <p class="header-logo__subtitle">Shelter for pets in Boston</p>
                         </div>
@@ -32,7 +33,7 @@
                     </div>
                     <div id="navigationLinks" class="nav-links-wrapper mobile-menu">
                         <div class="header-logo">
-                            <a href="#hero-section" class="header-logo__title-text">Cozy House</a>
+                            <a href="#our-pets" class="header-logo__title-text">Cozy House</a>
                             <p class="header-logo__subtitle">Shelter for pets in Boston</p>
                         </div>
                         <ul class="header-nav__menu flex">
@@ -114,8 +115,8 @@
             <div class="container">
                 <h2 class="pets-title primary-title">Our friends who <br>
                     are looking for a house</h2>
-                <ul class="pets-cards flex flex-jc-sb">
-                    <li class="pets-cards__item">
+                <ul class="pets-cards flex flex-jc-sb flex-ai-c">
+                    <!-- <li class="pets-cards__item">
                         <div class="pet-card">
                             <img src="../../assets/images/our-pets/our-pets-katrine.jpg" alt="dark cat"
                                 class="pet-card__img" />
@@ -202,29 +203,33 @@
                                     more</button>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
                 <nav class="pets-nav">
                     <ul class="pets-nav__pagination flex flex-ai-c flex-jc-sb">
                         <li class="pets-nav__pagination-item">
-                            <a class="pets-nav__pagination-item__link button-round inactive" href="#"><span
-                                    class="pets-nav__pagination-item__link-text">&lt;&lt;</span></a>
+                            <button type="button" id="first-page"
+                                class="pets-nav__pagination-item__btn button-round"><span
+                                    class="pets-nav__pagination-item__btn-text">&lt;&lt;</span></button>
                         </li>
                         <li class="pets-nav__pagination-item">
-                            <a class="pets-nav__pagination-item__link button-round inactive" href="#"><span
-                                    class="pets-nav__pagination-item__link-text">&lt;</span></a>
+                            <button type="button" id="prev-page"
+                                class="pets-nav__pagination-item__btn button-round"><span
+                                    class="pets-nav__pagination-item__btn-text">&lt;</span></button>
                         </li>
                         <li class="pets-nav__pagination-item">
-                            <a class="pets-nav__pagination-item__link button-round counter" href="#"><span
-                                    class="pets-nav__pagination-item__link-text">1</span></a>
+                            <button type="button" class="pets-nav__pagination-item__btn button-round counter"><span
+                                    id="page-number" class="pets-nav__pagination-item__btn-text">1</span></button>
                         </li>
                         <li class="pets-nav__pagination-item">
-                            <a class="pets-nav__pagination-item__link button-round" href="#"><span
-                                    class="pets-nav__pagination-item__link-text">&gt;</span></a>
+                            <button type="button" id="next-page"
+                                class="pets-nav__pagination-item__btn button-round"><span
+                                    class="pets-nav__pagination-item__btn-text">&gt;</span></button>
                         </li>
                         <li class="pets-nav__pagination-item">
-                            <a class="pets-nav__pagination-item__link button-round" href="#"><span
-                                    class="pets-nav__pagination-item__link-text">&gt;&gt;</span></a>
+                            <button type="button" id="last-page"
+                                class="pets-nav__pagination-item__btn button-round"><span
+                                    class="pets-nav__pagination-item__btn-text">&gt;&gt;</span></button>
                         </li>
                     </ul>
                 </nav>

@@ -2,6 +2,9 @@ import {
   hamburgerBtn,
   navigationMenu,
   navigationMenuLinks,
+  hamburgerLogo,
+  header,
+  headerLogo,
 } from "./globalVars.js";
 
 import { closeMenu, removeOverlay } from "./helperFunctions.js";
@@ -23,4 +26,20 @@ const navigationLinksFunctionality = () => {
   });
 };
 
-export { navigationLinksFunctionality };
+const hamburgerLogoFunctionality = () => {
+  hamburgerLogo.addEventListener("click", () => {
+    hamburgerBtn.classList.remove("rotate");
+    header.classList.remove("hide");
+    closeMenu();
+    removeOverlay();
+    navigationMenuLinks.forEach((link) =>
+      link.classList.remove("current-link")
+    );
+  });
+};
+
+headerLogo.addEventListener("click", () => {
+  navigationMenuLinks.forEach((link) => link.classList.remove("current-link"));
+});
+
+export { navigationLinksFunctionality, hamburgerLogoFunctionality };
