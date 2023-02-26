@@ -37,7 +37,7 @@
     }
   }
 
-  //  logo styels
+  //  logo styles
   &-logo {
     &__title-text {
       @include logo_title;
@@ -88,7 +88,6 @@
     background-color: $color-dark-3xl;
     width: 20em;
     min-height: 100vh;
-    // padding-top: 15.5em;
     padding-top: 10em;
 
     @include breakpoints-up(large) {
@@ -109,33 +108,12 @@
         display: none;
       }
     }
-    // &.mobile-menu {
-    //   .header-nav__menu-item__link {
-    //     @include paragraph-l;
-    //     @include menu_links(2rem);
-    //     letter-spacing: 0.004em;
-    //     color: $color-dark-s;
-    //     border-bottom: 0.1875rem solid transparent;
-    //     padding-bottom: 0.26666em;
-    //     transition: all 0.3s ease-in;
-
-    //     @include breakpoints-up(large) {
-    //       @include menu_links(0.9375rem);
-    //     }
-
-    //     &:hover,
-    //     &:focus {
-    //       color: $color-light-s;
-    //     }
-    //   }
-    // }
   }
 
   &-nav {
     &__menu {
       flex-direction: column;
       text-align: center;
-      // margin-top: 1em;
 
       @include breakpoints-up(large) {
         flex-direction: row;

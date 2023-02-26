@@ -23,12 +23,6 @@
   font-display: swap;
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -563,7 +557,6 @@ h6 {
 }
 
 .carousel-1280 {
-  left: -61.875rem;
   left: -67.5rem;
 }
 
@@ -669,10 +662,10 @@ body {
 
 @keyframes move-left-320 {
   from {
-    left: -286px;
+    left: -17.875rem;
   }
   to {
-    left: 0px;
+    left: 0rem;
   }
 }
 .transition-left-320 {
@@ -681,10 +674,10 @@ body {
 
 @keyframes move-right-320 {
   from {
-    left: -286px;
+    left: -17.875rem;
   }
   to {
-    left: -572px;
+    left: -35.75rem;
   }
 }
 .transition-right-320 {
@@ -693,10 +686,10 @@ body {
 
 @keyframes move-left-768 {
   from {
-    left: -620px;
+    left: -38.75rem;
   }
   to {
-    left: 0px;
+    left: 0rem;
   }
 }
 .transition-left-768 {
@@ -705,10 +698,10 @@ body {
 
 @keyframes move-right-768 {
   from {
-    left: -620px;
+    left: -38.75rem;
   }
   to {
-    left: -1240px;
+    left: -77.5rem;
   }
 }
 .transition-right-768 {
@@ -717,10 +710,10 @@ body {
 
 @keyframes move-left-1280 {
   from {
-    left: -1080px;
+    left: -67.5rem;
   }
   to {
-    left: 0px;
+    left: 0rem;
   }
 }
 .transition-left-1280 {
@@ -729,10 +722,10 @@ body {
 
 @keyframes move-right-1280 {
   from {
-    left: -1080px;
+    left: -67.5rem;
   }
   to {
-    left: -2160px;
+    left: -135rem;
   }
 }
 .transition-right-1280 {

@@ -38,12 +38,9 @@
         max-width: 26.875rem;
       }
       &-title {
-        // @include h3-mobile;
-        // color: $color-dark-l;
         margin-bottom: 0.92em;
 
         @include breakpoints-up(large) {
-          // @include h3;
           margin: 0 1.71428em 0.7142857em 0;
           text-align: left;
         }

@@ -223,28 +223,20 @@ h6 {
   transform: rotate(90deg);
 }
 
-// .show {
-//   display: block;
-// }
-
 .stop-scroll {
   overflow: hidden;
 }
 
 .carousel-320 {
-  // left: -16.875rem; // -270px
-  left: -17.875rem; // -286px
+  left: -17.875rem;
 }
 
 .carousel-768 {
-  //left: -36.25rem; // -580px
-  //left: -38.25rem; // -612px
-  left: -38.75rem; // -620px
+  left: -38.75rem;
 }
 
 .carousel-1280 {
-  left: -61.875rem; // -990px
-  left: -67.5rem; // -1080px
+  left: -67.5rem;
 }
 
 // container
@@ -257,5 +249,4 @@ body {
   font-family: "Georgia", sans-serif;
   font-weight: 400;
   position: relative;
-  //background-color: hsl(0, 0, 0); // temporary
 }

@@ -110,16 +110,15 @@
 .slide-out {
   animation: slide-out 0.5s ease-in-out forwards;
 }
-
 // ====== carousel animations ======
 
 // ===========320 ==================
 @keyframes move-left-320 {
   from {
-    left: -286px;
+    left: -17.875rem;
   }
   to {
-    left: 0px;
+    left: 0rem;
   }
 }
 
@@ -128,28 +127,25 @@
 }
 @keyframes move-right-320 {
   from {
-    // left: -270px;
-    left: -286px;
+    left: -17.875rem;
   }
   to {
-    // left: -540px;
-    left: -572px;
+    left: -35.75rem;
   }
 }
 
 .transition-right-320 {
   animation: move-right-320 0.5s linear;
 }
-
 // =========== /320 ==================
 
 // ===========768 ==================
 @keyframes move-left-768 {
   from {
-    left: -620px;
+    left: -38.75rem;
   }
   to {
-    left: 0px;
+    left: 0rem;
   }
 }
 
@@ -158,10 +154,10 @@
 }
 @keyframes move-right-768 {
   from {
-    left: -620px;
+    left: -38.75rem;
   }
   to {
-    left: -1240px;
+    left: -77.5rem;
   }
 }
 
@@ -173,10 +169,10 @@
 // ===========1280 ==================
 @keyframes move-left-1280 {
   from {
-    left: -1080px;
+    left: -67.5rem;
   }
   to {
-    left: 0px;
+    left: 0rem;
   }
 }
 
@@ -185,10 +181,10 @@
 }
 @keyframes move-right-1280 {
   from {
-    left: -1080px;
+    left: -67.5rem;
   }
   to {
-    left: -2160px;
+    left: -135rem;
   }
 }
 
