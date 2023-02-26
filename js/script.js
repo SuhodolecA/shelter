@@ -49,7 +49,6 @@ windowLoadFunctionality();
 
 // ======================== bugs
 /*
-1) click mobile menu logo doesn't close menu and not hide overlay
 2) fix bug with carousel cards height
 3) fix bug after update page, mobile menu isn't showing
 4) bug with popup border radius

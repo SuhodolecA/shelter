@@ -48,7 +48,7 @@
       }
 
       &-item {
-        // min-height: 435px;  // hot fix for proper scroll from our pets page to help section
+        min-height: 27.1875rem;
         @include breakpoints-up(large) {
           gap: 2.5em;
         }
