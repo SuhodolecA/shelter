@@ -46,9 +46,3 @@ windowScrollFunctionality();
 
 // add|remove mobile-menu class for proper mobile menu links work
 windowLoadFunctionality();
-
-// ======================== bugs
-/*
-5) bug with popup scroll bar
-5) reboot menu links active state after clicking logo
-*/
