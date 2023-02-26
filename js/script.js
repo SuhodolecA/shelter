@@ -38,10 +38,10 @@ carouselFunctionality();
 prevBtnFunctionality();
 nextBtnFunctionality();
 
-// window resize(remove side animation from hamburger menu for better view on different sizes)
+// window resize
 windowResizeFunctionality();
 
-// window scroll (add header position fixed depend of width)
+// window scroll
 windowScrollFunctionality();
 
 // add|remove mobile-menu class for proper mobile menu links work

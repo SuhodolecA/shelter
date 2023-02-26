@@ -1,10 +1,4 @@
-import {
-  header,
-  popup,
-  popupCloseBtn,
-  petsData,
-  hamburgerBtn,
-} from "./globalVars.js";
+import { popup, popupCloseBtn, petsData, hamburgerBtn } from "./globalVars.js";
 
 import {
   addOverlay,
@@ -41,25 +35,16 @@ const setPopupData = (petObj) => {
 };
 
 const openPopup = (event) => {
-  // console.log(
-  //   "event.target",
-  //   event.target.closest(".our-friends-carousel__track-card")
-  // );
-  console.log("e.target", event.target);
-  console.log("e.currentTarget", event.currentTarget);
   const petId = +event.target.closest(".pet-card").id;
   const currentPet = petsData[petId];
   setPopupData(currentPet);
   hamburgerBtn.classList.add("hide");
-  // header.classList.add("hide");
-  // console.log("overlay");
   addOverlay();
   popup.classList.remove("hide");
 };
 
 const closePopup = () => {
   removeSlideInOutAnimation();
-  // header.classList.remove("hide");
   hamburgerBtn.classList.remove("hide");
   removeOverlay();
   popup.classList.add("hide");

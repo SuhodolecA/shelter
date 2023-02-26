@@ -1,12 +1,3 @@
-import {
-  setWindowRange,
-  navigationMenu,
-  windowRange,
-  petsData,
-  setPetsData,
-  ourPetsSection,
-} from "./modules/globalVars.js";
-import { calculateRange } from "./modules/helperFunctions.js";
 import { hamburgerBtnFunctionality } from "./modules/hamburgerBtnFunctionality.js";
 import {
   navigationLinksFunctionality,
@@ -19,10 +10,6 @@ import {
   windowResizeFunctionality,
   windowScrollFunctionality,
 } from "./modules/windowFunctionality.js";
-import { paginationFunctionality } from "./modules/paginationFunctionality.js";
-// paginationFunctionality,
-// getPaginationCardsAmount,
-// generatePaginationListOfCards,
 
 // burger menu
 hamburgerBtnFunctionality();
@@ -36,9 +23,6 @@ closePopupBtnFunctionality();
 
 // overlay
 pageOverlayFunctionality();
-
-// pagination
-// paginationFunctionality();
 
 //  window functionality
 windowLoadFunctionality();

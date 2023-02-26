@@ -21,10 +21,6 @@ const pageOverlayFunctionality = () => {
         removeOverlay();
       } else {
         closePopup();
-        // removeSlideInOutAnimation();
-        // header.classList.remove("hide");
-        // removeOverlay();
-        // popup.classList.add("hide");
       }
     } else {
       removeOverlay();

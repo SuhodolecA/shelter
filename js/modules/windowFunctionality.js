@@ -9,14 +9,12 @@ import {
   ourPetsSection,
   paginationPageNumber,
   setPaginationElementsPerPage,
-  petsData,
   paginationDataList,
   setPaginationDataList,
 } from "./globalVars.js";
 
 import {
   removeSlideInOutAnimation,
-  removeOverlay,
   calculateRange,
   cardsInsideItem,
   fixingHeader,
@@ -30,9 +28,7 @@ import {
 
 import {
   paginationFunctionality,
-  generateRandomPetsList,
   fillPaginationCardsContainer,
-  updateBtnsState,
 } from "./paginationFunctionality.js";
 
 const windowResizeFunctionality = () => {
@@ -42,8 +38,6 @@ const windowResizeFunctionality = () => {
       navigationMenu.classList.remove("mobile-menu");
       hamburgerBtn.classList.remove("rotate");
       header.classList.remove("hide");
-      //removeOverlay(); // am I need this function here?!!!!!! it breaks overlay in popup active state
-      // closePopup();
     } else {
       navigationMenu.classList.add("mobile-menu");
     }
@@ -51,11 +45,7 @@ const windowResizeFunctionality = () => {
     //update carousel items only if innerWidth outside rage(prevent card flickering)
     if (calculateRange(window.innerWidth) !== windowRange) {
       setWindowRange(calculateRange(window.innerWidth));
-
-      // console.log("paginationDataList", paginationDataList);
       if (ourPetsSection) {
-        console.log("ourPetsSection");
-        // console.log("paginationDataList", paginationDataList.flat());
         const cardsPerPage = cardsInsideItem();
         setPaginationElementsPerPage(cardsPerPage);
         const petsDataArr = paginationDataList.flat();
@@ -79,17 +69,6 @@ const windowScrollFunctionality = () => {
     const innerWidth = window.innerWidth;
     const scrollY = window.scrollY;
     fixingHeader(innerWidth, scrollY);
-    // if (
-    //   (window.innerWidth >= 320 &&
-    //     window.innerWidth < 768 &&
-    //     window.scrollY >= 719) ||
-    //   (window.innerWidth >= 768 && window.scrollY >= 1140) ||
-    //   (window.innerWidth >= 1280 && window.scrollY >= 890)
-    // ) {
-    //   header.classList.add("fixed");
-    // } else {
-    //   header.classList.remove("fixed");
-    // }
   });
 };
 

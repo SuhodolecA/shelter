@@ -19,7 +19,6 @@ const helper = {
     navigationMenu.classList.add("slide-out");
   },
   addOverlay() {
-    // console.log("pageOverlay", pageOverlay);
     pageOverlay.classList.remove("hide");
     body.classList.add("stop-scroll");
   },
@@ -64,7 +63,6 @@ const helper = {
       } else {
         return 8;
       }
-      // console.log("ourPetsSection");
     } else {
       if (screenWidth < 768) {
         return 1;
@@ -78,7 +76,6 @@ const helper = {
 
   fixingHeader(innerWidth, scrollY) {
     if (ourPetsSection) {
-      // console.log("scrollY", scrollY);
       if (scrollY >= 117) {
         header.classList.add("fixed");
       } else {
@@ -141,7 +138,6 @@ const helper = {
 
     // == create card container ==
     const card = document.createElement("div");
-    // card.classList.add("our-friends-carousel__track-card");
     card.classList.add("pet-card");
     card.id = petObj.petId;
 
