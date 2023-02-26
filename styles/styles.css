@@ -1205,12 +1205,12 @@ body {
   left: 50%;
   z-index: 3;
   transform: translate(-50%, -50%);
+  border-radius: 0.5625em;
   background-color: hsl(0, 0%, 98%);
 }
 @media (min-width: 48rem) {
   .popup {
     max-width: 39.375rem;
-    border-radius: 0.5625rem 0 0 0.5625rem;
     -moz-text-align-last: left;
          text-align-last: left;
   }
@@ -1304,6 +1304,7 @@ body {
     line-height: 1.1;
     letter-spacing: 0.06em;
     color: hsl(0, 0%, 33%);
+    color: hsl(0, 0%, 0%);
     margin: 2.66666em 0;
   }
 }

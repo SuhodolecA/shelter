@@ -49,9 +49,6 @@ windowLoadFunctionality();
 
 // ======================== bugs
 /*
-2) fix bug with carousel cards height
-3) fix bug after update page, mobile menu isn't showing
-4) bug with popup border radius
 5) bug with popup scroll bar
 5) reboot menu links active state after clicking logo
 */

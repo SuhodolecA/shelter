@@ -42,7 +42,7 @@ const windowResizeFunctionality = () => {
       navigationMenu.classList.remove("mobile-menu");
       hamburgerBtn.classList.remove("rotate");
       header.classList.remove("hide");
-      removeOverlay(); // am I need this function here?!!!!!! it breaks overlay in popup active state
+      //removeOverlay(); // am I need this function here?!!!!!! it breaks overlay in popup active state
       // closePopup();
     } else {
       navigationMenu.classList.add("mobile-menu");

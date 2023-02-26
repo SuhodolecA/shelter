@@ -6,11 +6,12 @@
   left: 50%;
   z-index: 3;
   transform: translate(-50%, -50%);
+  border-radius: 0.5625em;
   background-color: $color-light-s;
 
   @include breakpoints-up(large) {
     max-width: 39.375rem;
-    border-radius: 0.5625rem 0 0 0.5625rem;
+    // border-radius: 0.5625rem 0 0 0.5625rem;
     text-align-last: left;
   }
 
@@ -84,6 +85,7 @@
 
       @include breakpoints-up(xlarge) {
         @include h5;
+        color: $color-black;
         margin: 2.66666em 0;
       }
     }
