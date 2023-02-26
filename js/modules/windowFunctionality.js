@@ -7,6 +7,11 @@ import {
   setCurrentCardsIds,
   setPetsData,
   ourPetsSection,
+  paginationPageNumber,
+  setPaginationElementsPerPage,
+  petsData,
+  paginationDataList,
+  setPaginationDataList,
 } from "./globalVars.js";
 
 import {
@@ -15,6 +20,7 @@ import {
   calculateRange,
   cardsInsideItem,
   fixingHeader,
+  divideInChunks,
 } from "./helperFunctions.js";
 
 import {
@@ -22,7 +28,12 @@ import {
   createCarousel,
 } from "./carouselFunctionality.js";
 
-import { paginationFunctionality } from "./paginationFunctionality.js";
+import {
+  paginationFunctionality,
+  generateRandomPetsList,
+  fillPaginationCardsContainer,
+  updateBtnsState,
+} from "./paginationFunctionality.js";
 
 const windowResizeFunctionality = () => {
   window.addEventListener("resize", () => {
@@ -36,12 +47,29 @@ const windowResizeFunctionality = () => {
     } else {
       navigationMenu.classList.add("mobile-menu");
     }
-    // update carousel items only if innerWidth outside rage(prevent card flickering)
+
+    //update carousel items only if innerWidth outside rage(prevent card flickering)
     if (calculateRange(window.innerWidth) !== windowRange) {
       setWindowRange(calculateRange(window.innerWidth));
-      const itemsAmount = cardsInsideItem();
-      setCurrentCardsIds(generateSetOfCardsIds(itemsAmount));
-      createCarousel();
+
+      // console.log("paginationDataList", paginationDataList);
+      if (ourPetsSection) {
+        console.log("ourPetsSection");
+        // console.log("paginationDataList", paginationDataList.flat());
+        const cardsPerPage = cardsInsideItem();
+        setPaginationElementsPerPage(cardsPerPage);
+        const petsDataArr = paginationDataList.flat();
+        const newDataList = divideInChunks(cardsPerPage, petsDataArr);
+        console.log("newDataList", newDataList);
+        setPaginationDataList(newDataList);
+        console.log("paginationPageNumber", paginationPageNumber);
+        paginationPageNumber.textContent = 1;
+        fillPaginationCardsContainer(paginationPageNumber, paginationDataList);
+      } else {
+        const itemsAmount = cardsInsideItem();
+        setCurrentCardsIds(generateSetOfCardsIds(itemsAmount));
+        createCarousel();
+      }
     }
   });
 };

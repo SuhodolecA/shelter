@@ -1733,15 +1733,10 @@ body {
 .pets-nav__pagination {
   gap: 0.625em;
 }
-.pets-nav__pagination-item__link {
-  display: inline-block;
+.pets-nav__pagination-item__btn {
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.15;
   letter-spacing: 0.06em;
   color: hsl(0deg, 0%, 16%);
-}
-.pets-nav__pagination-item__link-text {
-  position: relative;
-  top: 0.7em;
 }/*# sourceMappingURL=styles.css.map */

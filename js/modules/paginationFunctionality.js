@@ -111,6 +111,7 @@ const paginationFunctionality = () => {
 
   paginationNextPageBtn.addEventListener("click", () => {
     let pageNumber = +paginationPageNumber.textContent;
+    console.log("pageNumber", pageNumber);
     if (pageNumber === paginationDataList.length) {
       return;
     } else {
@@ -147,4 +148,9 @@ const paginationFunctionality = () => {
   });
 };
 
-export { paginationFunctionality };
+export {
+  paginationFunctionality,
+  generateRandomPetsList,
+  fillPaginationCardsContainer,
+  updateBtnsState,
+};
