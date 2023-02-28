@@ -382,6 +382,7 @@ a:hover {
 }
 .pet-card__img {
   vertical-align: middle;
+  min-height: 16.875rem;
 }
 .pet-card__content {
   padding: 1.875em 0;
@@ -1717,6 +1718,7 @@ body {
 }
 .pets-cards__item {
   max-width: 16.875rem;
+  min-height: 27.1875rem;
 }
 .pets-nav {
   max-width: 18.75em;
