@@ -76,6 +76,8 @@ const createCarousel = () => {
 
 const carouselFunctionality = () => {
   carouselTrack.addEventListener("animationend", () => {
+    carouselTrack.classList.remove("fade-out");
+    carouselTrack.classList.add("fade-in");
     clearCarouselTrackTransition();
     fillCardItem(startCurrentCardsIds, currentItem);
     carouselBtnPrev.disabled = false;
@@ -85,6 +87,8 @@ const carouselFunctionality = () => {
 
 const movePrev = () => {
   carouselTrack.classList.add(`transition-left-${windowRange}`);
+  carouselTrack.classList.remove("fade-in");
+  carouselTrack.classList.add("fade-out");
   carouselBtnPrev.disabled = true;
   carouselBtnNext.disabled = true;
   const itemsAmount = cardsInsideItem();
@@ -96,6 +100,8 @@ const movePrev = () => {
 
 const moveNext = () => {
   carouselTrack.classList.add(`transition-right-${windowRange}`);
+  carouselTrack.classList.remove("fade-in");
+  carouselTrack.classList.add("fade-out");
   carouselBtnNext.disabled = true;
   carouselBtnPrev.disabled = true;
   const itemsAmount = cardsInsideItem();

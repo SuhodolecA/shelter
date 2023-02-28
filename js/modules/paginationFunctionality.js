@@ -129,6 +129,8 @@ const paginationFunctionality = () => {
 
   paginationFirstPageBtn.addEventListener("click", () => {
     paginationPageNumber.textContent = 1;
+    paginationCardsContainer.classList.add("fade-out");
+    paginationCardsContainer.classList.remove("fade-in");
     const pageNumber = +paginationPageNumber.textContent;
     updateBtnsState(pageNumber, paginationDataList);
     fillPaginationCardsContainer(paginationPageNumber, paginationDataList);

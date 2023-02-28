@@ -29,6 +29,7 @@ import {
 import {
   paginationFunctionality,
   fillPaginationCardsContainer,
+  updateBtnsState,
 } from "./paginationFunctionality.js";
 
 const windowResizeFunctionality = () => {
@@ -50,11 +51,11 @@ const windowResizeFunctionality = () => {
         setPaginationElementsPerPage(cardsPerPage);
         const petsDataArr = paginationDataList.flat();
         const newDataList = divideInChunks(cardsPerPage, petsDataArr);
-        console.log("newDataList", newDataList);
         setPaginationDataList(newDataList);
-        console.log("paginationPageNumber", paginationPageNumber);
         paginationPageNumber.textContent = 1;
         fillPaginationCardsContainer(paginationPageNumber, paginationDataList);
+        const pageNumber = +paginationPageNumber.textContent;
+        updateBtnsState(pageNumber, paginationDataList);
       } else {
         const itemsAmount = cardsInsideItem();
         setCurrentCardsIds(generateSetOfCardsIds(itemsAmount));
